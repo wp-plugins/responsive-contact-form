@@ -7,7 +7,7 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Contact Us Form is a simple WordPress plugin that generates a responsive contact form on your website or blog. 
+Responsive Contact Form is a simple WordPress plugin that generates a responsive contact form on your website or blog. 
 
 == Description ==
 
