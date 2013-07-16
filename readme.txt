@@ -7,23 +7,23 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add Contact Form to your WordPress website.
+Contact Us Form is a simple WordPress plugin that generates a responsive contact form on your website or blog. 
 
 == Description ==
 
 Contact Us Form is a simple WordPress plugin that generates a responsive contact form on your website or blog.simply insert [ai_contact_form] in any page or post content and the form will appear or paste this php code < ? php do_shortcode("[ai_contact_form]"); ? > in any template.
 
-= Features =
+Features:
 
-* easy to install.
+* Easy to install.
 * It is responsive form.
-* easy jQuery validations.
-* easy to understand coding standard.
-* easy to enable/disable alpha numeric captcha.
-* easy to add subject text for mail to be sent to the users.
+* Easy jQuery validations.
+* Easy to understand coding standard.
+* Easy to enable/disable alpha numeric captcha.
+* Easy to add subject text for mail to be sent to the users.
 * You can choose where to send the messages - this can be any email address.
 * You can choose the message to be displayed after successful submission of form Ex.-Your details are submitted successfully!.
-* easy to call using two method one is using shortcode [ai_contact_form] and other using paste this php code 
+* Easy to call using two method one is using shortcode [ai_contact_form] and other using paste this php code 
   < ? php do_shortcode("[ai_contact_form]"); ? >
 
 == Installation ==
