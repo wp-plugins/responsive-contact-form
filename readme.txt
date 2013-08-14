@@ -34,6 +34,8 @@ Features:
 4. Create a page or a post and insert the shortcode [ai_contact_form].
 5. You can add < ? php do_shortcode("[ai_contact_form]"); ? > shortcode in any template.
 
+Click here to view more about this plugin. [Visit blog post](http://softstribe.com/wordpress/how-to-add-responsive-contact-form-in-wordpress) |  Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
+
 == Frequently Asked Questions ==
 
 = No Questions
