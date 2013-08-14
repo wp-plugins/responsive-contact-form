@@ -3,7 +3,7 @@ Contributors: augustinfotech
 Tags: Responsive Contact Form,Contact Form, text, contact, form, contacts, contact form, request, contact me, feedback form, feedback, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy
 Requires at least: 3.5.2
 Tested up to: 3.5.2
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,8 +48,15 @@ Features:
 
 
 == Changelog ==
+= 1.0 =
+* First version.
 
-= V1.0 =
-* First Version
-* Initial Level
+= 1.1 =
+* Fixed the issue of appending form content on the top of page where shortcode is included. Now form is displayed where you keep your shortcode in templates.
+
+
+== Upgrade Notice ==
+
+* Fixed the issue of appending form content on the top of page where shortcode is included. Now form is displayed where you keep your shortcode in templates.
+
 
