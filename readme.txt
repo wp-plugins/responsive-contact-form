@@ -1,9 +1,9 @@
 === Responsive Contact Form ===
 Contributors: augustinfotech
 Tags: Responsive Contact Form,Contact Form, text, contact, form, contacts, contact form, request, contact me, feedback form, feedback, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy
-Requires at least: 3.5
+Requires at least: 3.6
 Tested up to: 3.6
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,24 +20,21 @@ Features:
 * Easy jQuery validations.
 * Easy to understand coding standard.
 * Easy to enable/disable alpha numeric captcha.
-* Easy to manage subject text for mail to be sent to the users.
-* Easy to manage message for mail to be sent to the users.
-* You can choose where to send the messages - allows on more than one email addresses.
-* Easy to Display using two method 
-	1)- shortcode [ai_contact_form] in pages, 
-	2)- paste this php code 
-	<?php do_shortcode("[ai_contact_form]"); ?> OR 
-	<?php echo do_shortcode("[ai_contact_form]"); ?> in templates.
-* New - easily manage fields to be displyed on form.
-* New - export list of all user who contact site.
-* New - Prevents from cross site script(XSS) attacks.  
+* Easy to add subject text for mail to be sent to the users.
+* You can choose where to send the messages - this can be any email address.
+* You can choose the message to be displayed after successful submission of form Ex.-Your details are submitted successfully!.
+* Easy to call using two method one is using shortcode [ai_contact_form] and other using paste this php code 
+  <?php do_shortcode("[ai_contact_form]"); ?> or <?php echo do_shortcode("[ai_contact_form]"); ?>
+* New easily manage fields to be displyed on form.
+* New export list of all user who contact site.
+* New send me a copy checkbox is added to form.  
 
 Click here to view more about this plugin. [Visit blog post](http://softstribe.com/wordpress/how-to-add-responsive-contact-form-in-wordpress) 
 Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 
 == Installation ==
 
-1. Upload the "responsive-contact-form" folder to the "/wp-content/plugins/" directory.
+1. Upload the `responsive-contact-form` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin using the 'Plugins' menu in your WordPress admin panel.
 3. You can adjust the necessary settings using your WordPress admin panel in "Settings" > "AI Simple Ajax Contact Form Settings".
 4. Create a page or a post and insert the shortcode [ai_contact_form].
@@ -68,12 +65,14 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 
 = 1.2 =
 * Fixed the issue of IE9 form submission without captcha validation.
-* New - easily manage fields to be displyed on form.
-* New - export list of all user who contact site.
-* New - Prevents from cross site script(XSS) attacks. 
+
+= 1.3 =
+* Added send me a copy checkbox on form manageable from admin.
+
 
 == Upgrade Notice ==
 * All field which you want to display on form or not can be managed also fields are mandatory or not can be selected.
 * Now managing the list of all user who contact site is available in admin panel which can be exported to excel file.
 * Fixed the issue of IE9 form submission without captcha validation.
+* Added send me a copy checkbox on form manageable from admin 
 
