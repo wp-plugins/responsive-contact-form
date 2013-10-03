@@ -71,6 +71,7 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 
 
 == Upgrade Notice ==
+* Upgrade Notice Notification
 * All field which you want to display on form or not can be managed also fields are mandatory or not can be selected.
 * Now managing the list of all user who contact site is available in admin panel which can be exported to excel file.
 * Fixed the issue of IE9 form submission without captcha validation.
