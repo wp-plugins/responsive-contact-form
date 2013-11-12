@@ -12,79 +12,71 @@ wp_head();
 
 <script type="text/javascript">
 
-/* <![CDATA[ */
+	var MyAjax = "<?php echo home_url(); ?>/wp-admin/admin-ajax.php";
 
-var MyAjax = "<?php echo home_url(); ?>/wp-admin/admin-ajax.php";
+	function refreshCaptcha(){
 
-/* ]]> */
+		var img = document.images['captchaimg'];		
 
-</script>
+		img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
 
-<script type="text/javascript">
+	}
 
-function refreshCaptcha(){
+	function replaceName() 
 
-	var img = document.images['captchaimg'];		
+	{
 
-	img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
+	   var pattern = /\bscript\b/ig;
 
-}
+	   var mystring = document.getElementById('ai_name').value;
 
-function replaceName() 
+	   var newString = mystring.replace(pattern, " script ");
 
-{
+	   document.getElementById('ai_name').value = newString;
 
-   var pattern = /\bscript\b/ig;
+	}
 
-   var mystring = document.getElementById('ai_name').value;
+	function replaceWeburl() 
 
-   var newString = mystring.replace(pattern, " script ");
+	{
 
-   document.getElementById('ai_name').value = newString;
+	   var pattern = /\bscript\b/ig;
 
-}
+	   var mystring = document.getElementById('ai_website').value;
 
-function replaceWeburl() 
+	   var newString = mystring.replace(pattern, " script ");
 
-{
+	   document.getElementById('ai_website').value = newString;
 
-   var pattern = /\bscript\b/ig;
+	}
 
-   var mystring = document.getElementById('ai_website').value;
+	function replaceSubject() 
 
-   var newString = mystring.replace(pattern, " script ");
+	{
 
-   document.getElementById('ai_website').value = newString;
+	   var pattern = /\bscript\b/ig;
 
-}
+	   var mystring = document.getElementById('ai_subject').value;
 
-function replaceSubject() 
+	   var newString = mystring.replace(pattern, " script ");
 
-{
+	   document.getElementById('ai_subject').value = newString;
 
-   var pattern = /\bscript\b/ig;
+	}
 
-   var mystring = document.getElementById('ai_subject').value;
+	function replaceComment() 
 
-   var newString = mystring.replace(pattern, " script ");
+	{
 
-   document.getElementById('ai_subject').value = newString;
+	   var pattern = /\bscript\b/ig;
 
-}
+	   var mystring = document.getElementById('ai_comment').value;
 
-function replaceComment() 
+	   var newString = mystring.replace(pattern, " script ");
 
-{
+	   document.getElementById('ai_comment').value = newString;
 
-   var pattern = /\bscript\b/ig;
-
-   var mystring = document.getElementById('ai_comment').value;
-
-   var newString = mystring.replace(pattern, " script ");
-
-   document.getElementById('ai_comment').value = newString;
-
-}
+	}
 
 </script>
 <?php 
@@ -152,9 +144,7 @@ $data = '
 	<label class="control-label" for="ai_comment">Comment';
 	if(esc_attr(get_option('ai_enable_require_comment'))=="on"){ $data .= '<span class="req">*</span>'; } $data .= '</label>
       	<div class="controls">
-          <textarea id="ai_comment" name="ai_comment" title="Message" rows="4" class="';
-		  	if(esc_attr(get_option('ai_enable_require_comment'))=="on") {$data .= 'required';} $data .= '" onblur="replaceComment();">
-		  </textarea>
+          <textarea id="ai_comment" name="ai_comment" title="Message" rows="4" class="';if(esc_attr(get_option('ai_enable_require_comment'))=="on"){$data .= 'required';} $data .= '" onblur="replaceComment();"></textarea>
         </div>
     </div>';
 	} 

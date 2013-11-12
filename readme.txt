@@ -2,8 +2,8 @@
 Contributors: augustinfotech
 Tags: Responsive Contact Form,Contact Form, text, contact, form, contacts, contact form, request, contact me, feedback form, feedback, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy
 Requires at least: 3.6
-Tested up to: 3.6
-Stable tag: 1.3
+Tested up to: 3.7.1
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,8 @@ Features:
   <?php do_shortcode("[ai_contact_form]"); ?> or <?php echo do_shortcode("[ai_contact_form]"); ?>
 * New easily manage fields to be displyed on form.
 * New export list of all user who contact site.
-* New send me a copy checkbox is added to form.  
+* New send me a copy checkbox is added to form.
+* New added message from user in database and displayed in admin.   
 
 Click here to view more about this plugin. [Visit blog post](http://softstribe.com/wordpress/how-to-add-responsive-contact-form-in-wordpress) 
 Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
@@ -69,11 +70,14 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 = 1.3 =
 * Added send me a copy checkbox on form manageable from admin.
 
+= 1.4 =
+* Added message from user in database and displayed in admin.
+
 
 == Upgrade Notice ==
 * Upgrade Notice Notification
-* All field which you want to display on form or not can be managed also fields are mandatory or not can be selected.
-* Now managing the list of all user who contact site is available in admin panel which can be exported to excel file.
-* Fixed the issue of IE9 form submission without captcha validation.
-* Added send me a copy checkbox on form manageable from admin 
+* Fixed issue of deleting record and on uninstallallation deletion of all fields data and table.
+* Fixed the issue of textarea focus in the middle.
+* Added message from user in database and displayed in admin. 
+* Compatible in wordpress 3.7.1
 

@@ -39,6 +39,7 @@
 						<th style="width:50px;text-align:left;"><u>Sr. No</u></th>
 						<th style="text-align:left;"><u>Username</u></th> 
 						<th><u>Email Address</u></th>                                  
+						<th><u>Message</u></th>                                  
 						<th style="width:95px;text-align:left;"><u>Contact Date</u></th>                              
 						<th style="width:50px;text-align:center;">Action</th>
 					</tr>
@@ -77,14 +78,16 @@
 							$id        = $user->user_id;
 							$username  = $user->username;
 							$email     = $user->email_id;
+							$message     = $user->message;
 							$date   = $user->contact_date; ?>
 							<tr>
 								<td style="width:40px;text-align:center;"><?php echo $no; ?></td>
 								<td nowrap><?php echo urldecode($username); ?></td>
 								<td nowrap><?php echo $email; ?></td> 
+								<td><?php echo $message; ?></td> 
 								<td style="text-align:center;"><?php echo $date; ?></td>                
 								<td style="width:40px;text-align:center;">								
-									<a onclick="javascript:return confirm('Are you sure, want to delete record of <?php echo $username; ?>?')" href="admin.php?page=ai_user_list&info=del&did=<?php echo $id;?>">
+									<a onclick="javascript:return confirm('Are you sure, want to delete record of <?php echo $username; ?>?')" href="admin.php?page=ai_user_lists&info=del&did=<?php echo $id;?>">
 									<img src="<?php echo plugins_url(); ?>/responsive-contact-form/images/delete.png" title="Delete" alt="Delete" style="height:18px;" />
 									</a>
 								</td>                

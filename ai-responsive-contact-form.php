@@ -8,7 +8,7 @@ Plugin URI: http://www.augustinfotech.com
 
 Description: Add Contact Form to your WordPress website.You can add [ai_contact_form] shortcode where you want to display contact form.OR You can add  do_shortcode("[ai_contact_form]"); shortcode in any template.
 
-Version: 1.3
+Version: 1.4
 
 Text Domain: aicontactform
 
@@ -49,14 +49,6 @@ function update_notification_message( $plugin_data, $r )
 /* Activate Hook Plugin */
 
 register_activation_hook(__FILE__,'ai_add_contact_table');
-
-
-
-/*Uninstall Hook Plugin */
-
-if( function_exists('register_uninstall_hook') )  register_uninstall_hook(__FILE__,'ai_drop_contact_table');   
-
-
 
 # Load the language files
 
@@ -108,12 +100,11 @@ function ai_register_fields(){
 
 }
 
-
+/*Uninstall Hook Plugin */
 
 if( function_exists('register_uninstall_hook') ){
 
-	register_uninstall_hook(__FILE__,'ai_contact_form_uninstall');		
-
+	register_uninstall_hook(__FILE__,'ai_contact_form_uninstall');			
 }
 
 function ai_contact_form_uninstall(){ 
@@ -152,6 +143,11 @@ function ai_contact_form_uninstall(){
 		 
 	delete_option('ai_visible_sendcopy');	 
 
+	global $wpdb;	
+
+	$ai_table_contact_drop = $wpdb->prefix . "ai_contact";  
+
+	$wpdb->query("DROP TABLE IF EXISTS ".$ai_table_contact_drop);
 }
 
 
@@ -180,7 +176,7 @@ add_action('admin_menu','ai_contact_setting');
 
 function ai_contact_setting(){
 
-	add_menu_page('AI Contact Form','AI Contact Form','manage_options','ai_contact','ai_contact_settings','',11);
+	add_menu_page('AI Contact Form','AI Contact Form','manage_options','ai_contact','ai_contact_settings','');
 
 	add_submenu_page('ai_contact', 'User List', 'User List','manage_options', 'ai_user_lists', 'ai_user_list');
 
@@ -201,6 +197,8 @@ function ai_add_contact_table(){
 	username varchar(50) NULL,
 
 	email_id varchar(255) NULL,
+	
+	message varchar(1000) NULL,
 
 	contact_date date NULL,					  					  
 
@@ -209,18 +207,6 @@ function ai_add_contact_table(){
 	) ";
 
 	dbDelta($ai_sql_contact);
-
-}
-
-
-
-function ai_drop_contact_table(){
-
-	global $wpdb;	
-
-	$ai_table_contact_drop = $wpdb->prefix . "ai_contact";  
-
-	$wpdb->query("DROP TABLE IF EXISTS ".$ai_table_contact_drop);
 
 }
 
@@ -478,11 +464,11 @@ function ai_action_call(){
 
 		if($ai_name != 'User' && $ai_name != ''){
 
-			$wpdb->insert( $table_name, array("username" => urlencode($ai_name), "email_id" => $ai_email, "contact_date" => $date ));
+			$wpdb->insert( $table_name, array("username" => urlencode($ai_name), "email_id" => $ai_email, "message" => $ai_comment, "contact_date" => $date ));
 
 		}else{
 
-			$wpdb->insert( $table_name, array("email_id" => $ai_email, "contact_date" => $date ));
+			$wpdb->insert( $table_name, array("email_id" => $ai_email, "message" => $ai_comment, "contact_date" => $date ));
 
 		}	
 

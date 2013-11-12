@@ -19,6 +19,7 @@ $act=$_REQUEST["act"];
 				<th align="left" valign="middle">User ID</th>
 				<th align="left" valign="middle">Username</th>
 				<th align="left" valign="middle">Email Address</th>
+				<th align="left" valign="middle">Message</th>
 				<th align="left" valign="middle">Contact Date</th>
 			</tr>';
 			foreach($export_result as $row)
@@ -27,11 +28,12 @@ $act=$_REQUEST["act"];
 					<td align="left" valign="middle">'.$row->user_id.'</td>
 					<td align="left" valign="middle">'.$row->username.'</td>
 					<td align="left" valign="middle">'.$row->email_id.'</td>
+					<td align="left" valign="middle">'.$row->message.'</td>
 					<td align="left" valign="middle">'.$row->contact_date.'</td>
 				</tr>';
 			}
 		$rs.= '</table>';
-	$filename = "User-list" . date('Y-m-d');
+	$filename = "User-list" . date('Y-m-d g-i');
 	header("Content-type: application/vnd.ms-excel");
 	header("Content-disposition: xls" . date("Y-m-d") . ".xls");
 	header( "Content-disposition: filename=".$filename.".xls");
