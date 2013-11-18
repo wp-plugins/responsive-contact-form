@@ -20,8 +20,6 @@ Author URI: http://www.augustinfotech.com
 
 define('AI_PDIR_PATH',plugin_dir_path(__FILE__ ));
 
-
-
 add_action('plugins_loaded', 'ai_contact_init');
 
 /** Start Upgrade Notice **/
@@ -55,14 +53,16 @@ register_activation_hook(__FILE__,'ai_add_contact_table');
 function ai_contact_init(){
 
 	load_plugin_textdomain( 'aicontactform', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-
 }
 
 
 
 add_action('admin_init', 'ai_register_fields' );
 
-function ai_register_fields(){	
+function ai_register_fields(){
+	
+	//wp_register_style( 'jquery-ui',  plugins_url('/responsive-contact-form/css/jquery-ui.css') );	
+	//wp_register_style( 'jquery-ui',  '//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css' );	
 
 	register_setting( 'ai-fields', 'ai_email_address_setting' );
 
@@ -177,9 +177,17 @@ add_action('admin_menu','ai_contact_setting');
 function ai_contact_setting(){
 
 	add_menu_page('AI Contact Form','AI Contact Form','manage_options','ai_contact','ai_contact_settings','');
+	global $page_options;
+	$page_options = add_submenu_page('ai_contact', 'User List', 'User List','manage_options', 'ai_user_lists', 'ai_user_list');
+}
 
-	add_submenu_page('ai_contact', 'User List', 'User List','manage_options', 'ai_user_lists', 'ai_user_list');
-
+add_action('admin_enqueue_scripts', 'load_admin_scripts');
+function load_admin_scripts($hook) {
+	global $page_options;
+	if( $hook != $page_options )
+	return;
+	wp_register_style( 'jquery-ui',  '//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css' );	
+	wp_enqueue_style('jquery-ui');
 }
 
 function ai_add_contact_table(){	
@@ -188,7 +196,9 @@ function ai_add_contact_table(){
 
 	$ai_table_contact = $wpdb->prefix . "ai_contact";			
 
-	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');	  
+
+	$wpdb->query("DROP TABLE IF EXISTS ".$ai_table_contact);
 
 	$ai_sql_contact = "CREATE TABLE IF NOT EXISTS $ai_table_contact (
 
@@ -232,7 +242,8 @@ function ai_scripts(){
 
 	wp_enqueue_style('wp-datatable',  plugins_url('/responsive-contact-form/css/data_table.css'));
 
-	wp_enqueue_style('jquery-ui',  plugins_url('/responsive-contact-form/css/jquery-ui.css'));
+	//wp_enqueue_style('jquery-ui',  plugins_url('/responsive-contact-form/css/jquery-ui.css'));
+	wp_enqueue_style('jquery-ui');
 
 }  
 
@@ -242,7 +253,7 @@ if(!is_admin()){
 
 	wp_localize_script( 'my-ajax-request', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );	
 
-	wp_enqueue_script( 'my-ajax-request', plugins_url('/js/ajax.js' , __FILE__), array( 'jquery' ) );
+	wp_enqueue_script( 'my-ajax-request', plugins_url('/js/ajax.js' , __FILE__), array( 'jquery' ), '', true );
 
 }
 
