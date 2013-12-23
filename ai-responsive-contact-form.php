@@ -52,7 +52,7 @@ register_activation_hook(__FILE__,'ai_add_contact_table');
 
 function ai_contact_init(){
 
-	load_plugin_textdomain( 'aicontactform', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( 'aicontactform', false, plugin_basename( dirname( __FILE__ )  . '/languages/' ));
 }
 
 
@@ -176,9 +176,9 @@ add_action('admin_menu','ai_contact_setting');
 
 function ai_contact_setting(){
 
-	add_menu_page('AI Contact Form','AI Contact Form','manage_options','ai_contact','ai_contact_settings','');
+	add_menu_page(__('AI Contact Form','aicontactform'),__('AI Contact Form','aicontactform'),'manage_options','ai_contact','ai_contact_settings','');
 	global $page_options;
-	$page_options = add_submenu_page('ai_contact', 'User List', 'User List','manage_options', 'ai_user_lists', 'ai_user_list');
+	$page_options = add_submenu_page('ai_contact', __('User List','aicontactform'), __('User List','aicontactform'),'manage_options', 'ai_user_lists', 'ai_user_list');
 }
 
 add_action('admin_enqueue_scripts', 'load_admin_scripts');
@@ -333,7 +333,7 @@ function ai_action_call(){
 
 	if(get_option('ai_subject_text')==''){
 
-		$ai_subtext = 'August Infotech';
+		$ai_subtext = __('August Infotech','aicontactform');
 
 	}else{
 
@@ -345,7 +345,7 @@ function ai_action_call(){
 
 	if(get_option('ai_reply_user_message')==''){
 
-		$ai_reply_msg = 'Thank you for contacting us...We will get back to you soon...';
+		$ai_reply_msg = __('Thank you for contacting us...We will get back to you soon...','aicontactform');
 
 	}else{
 
@@ -373,7 +373,7 @@ function ai_action_call(){
 
 	// settings for mail received by user
 
-	$ai_subject_mail = 'Reply : '.$ai_subtext;			
+	$ai_subject_mail = __('Reply : ','aicontactform').$ai_subtext;			
 
 	$ai_headers = "MIME-Version: 1.0\n";
 
@@ -391,25 +391,25 @@ function ai_action_call(){
 
 	
 
-	$ai_admin_usermsg = "<table><tr><td colspan='2'><b>User Details</b></td><tr/><tr><td colspan='2' height='40%'></td></tr>";
+	$ai_admin_usermsg = "<table><tr><td colspan='2'><b>".__('User Details','aicontactform')."</b></td><tr/><tr><td colspan='2' height='40%'></td></tr>";
 
 	
 
 	if(esc_attr(get_option('ai_visible_name'))=="on" && $ai_name != ''){
 
-		$ai_admin_usermsg .= "<tr><td align='left' width='80px'>Name : </td><td>".$ai_name."</td></tr>";
+		$ai_admin_usermsg .= "<tr><td align='left' width='80px'>".__('Name :','aicontactform')."</td><td>".$ai_name."</td></tr>";
 
 	} 
 
 						
 
-	$ai_admin_usermsg .= "<tr><td align='left' width='80px'>Email ID : </td><td>".$ai_email."</td></tr>";
+	$ai_admin_usermsg .= "<tr><td align='left' width='80px'>".__('Email ID :','aicontactform')." </td><td>".$ai_email."</td></tr>";
 
 						
 
 	if(esc_attr(get_option('ai_visible_phone'))=="on" && $ai_phone != ''){
 
-		$ai_admin_usermsg .= "<tr><td align='left' width='70px'>Phone : </td><td>".$ai_phone."</td></tr>";
+		$ai_admin_usermsg .= "<tr><td align='left' width='70px'>".__('Phone :','aicontactform')."</td><td>".$ai_phone."</td></tr>";
 
 	}
 
@@ -417,7 +417,7 @@ function ai_action_call(){
 
 	if(esc_attr(get_option('ai_visible_website'))=="on" && $ai_website != ''){
 
-		$ai_admin_usermsg .= "<tr><td align='left' width='80px'>Website Url : </td><td>".$ai_website."</td></tr>";
+		$ai_admin_usermsg .= "<tr><td align='left' width='80px'>".__('Website Url :','aicontactform')."</td><td>".$ai_website."</td></tr>";
 
 	}
 
@@ -425,7 +425,7 @@ function ai_action_call(){
 
 	if(esc_attr(get_option('ai_visible_subject'))=="on" && $ai_subject != ''){ 
 
-		$ai_admin_usermsg .= "<tr><td align='left' width='80px'>Subject : </td><td>".$ai_subject."</td></tr>";
+		$ai_admin_usermsg .= "<tr><td align='left' width='80px'>".__('Subject :','aicontactform')." </td><td>".$ai_subject."</td></tr>";
 
 	}
 
@@ -433,7 +433,7 @@ function ai_action_call(){
 
 	if(esc_attr(get_option('ai_visible_comment'))=="on" && $ai_comment != ''){ 
 
-		$ai_admin_usermsg .= "<tr><td align='left' valign='top' width='70px'>Comment : </td><td>".$ai_comment."</td></tr></table>";		
+		$ai_admin_usermsg .= "<tr><td align='left' valign='top' width='70px'>".__('Comment : ','aicontactform')."</td><td>".$ai_comment."</td></tr></table>";		
 
 	}
 
@@ -441,7 +441,7 @@ function ai_action_call(){
 
 	if($ai_name == ''){	$ai_name = 'User';}
 
-	$ai_admin_subject = $ai_name.' has contact us';		
+	$ai_admin_subject = $ai_name.__(' has contact us','aicontactform');		
 
 						
 
@@ -456,7 +456,7 @@ function ai_action_call(){
 
 	$ai_admin_headers .= "X-Mailer: php-mail-function-0.2\n";
 
-	$ai_usercopy_subject = 'Copy of form submitted';
+	$ai_usercopy_subject = __('Copy of form submitted','aicontactform');
 
 	if($arr == 1){		
 
@@ -490,5 +490,4 @@ function ai_action_call(){
 	die(); 	
 
 }
-
 ?>

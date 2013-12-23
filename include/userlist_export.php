@@ -13,14 +13,14 @@ $act=$_REQUEST["act"];
 	$rs =' 
 		<table border="1" cellspacing="1" cellpadding="0">
 			<tr>
-				<th align="center" valign="middle" colspan="4">List Of Users Contacted Site</th>				
+				<th align="center" valign="middle" colspan="4">'.__('List Of Users Contacted Site','aicontactform').'</th>				
 			</tr>
 			<tr>
-				<th align="left" valign="middle">User ID</th>
-				<th align="left" valign="middle">Username</th>
-				<th align="left" valign="middle">Email Address</th>
-				<th align="left" valign="middle">Message</th>
-				<th align="left" valign="middle">Contact Date</th>
+				<th align="left" valign="middle">'.__('User ID','aicontactform').'</th>
+				<th align="left" valign="middle">'.__('Username','aicontactform').'</th>
+				<th align="left" valign="middle">'.__('Email Address','aicontactform').'</th>
+				<th align="left" valign="middle">'.__('Message','aicontactform').'</th>
+				<th align="left" valign="middle">'.__('Contact Date','aicontactform').'</th>
 			</tr>';
 			foreach($export_result as $row)
 			{ 								  

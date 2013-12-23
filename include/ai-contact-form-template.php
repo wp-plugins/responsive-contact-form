@@ -82,35 +82,35 @@ wp_head();
 <?php 
 $data = '
 	<div class="responsive-contact-form">
-	<div class="alert alert-success" id="smsg" style="display:none"></div>
+	<div class="alert alert-success" id="smsg" style="display:none">'.__("<strong>Succeed :</strong>Your details are submitted successfully!","aicontactform").'</div>
 	<form class="form-horizontal" name="formValidate" id="ResponsiveContactForm" method="post" >
     <fieldset>';
 	if(esc_attr(get_option("ai_visible_name"))=="on") {
-    	$data .= '<div class="control-group"><label class="control-label" for="ai_name">Name';
+    	$data .= '<div class="control-group"><label class="control-label" for="ai_name">'.__('Name','aicontactform');
 		if(esc_attr(get_option('ai_enable_require_name'))=="on"){ 
 			$data .= '<span class="req">*</span>'; 
 		}
 		$data .= '</label>
 	      <div class="controls">
-		      <input id="ai_name" name="ai_name" maxlength="50" title="Name" type="text" class="input-xlarge text ';		  
+		      <input id="ai_name" name="ai_name" maxlength="50" title="'.__('Name','aicontactform').'" type="text" class="input-xlarge text ';		  
 			  if(esc_attr(get_option('ai_enable_require_name'))=="on") { $data .= 'required '; }  $data .= '"onblur="replaceName();">
 	      </div>
     </div>';
 	}      
 	$data .= '
 	<div class="control-group">
-	<label class="control-label" for="ai_email">Email ID<span class="req">*</span></label>
+	<label class="control-label" for="ai_email">'.__('Email ID','aicontactform').'<span class="req">*</span></label>
 	    <div class="controls">
-	    	<input id="ai_email" maxlength="255" name="ai_email" title="Email ID" type="text"class="input-xlarge email required">
+	    	<input id="ai_email" maxlength="255" name="ai_email" title="'.__('Email ID','aicontactform').'" type="text"class="input-xlarge email required">
 	    </div>
     </div>'; 
 	if(esc_attr(get_option('ai_visible_phone'))=="on") { 	
 	$data .= '	
     <div class="control-group">
-	<label class="control-label" for="ai_phone">Phone';
+	<label class="control-label" for="ai_phone">'.__('Phone','aicontactform');
 	if(esc_attr(get_option('ai_enable_require_phone'))=="on"){ $data .= '<span class="req">*</span>'; } $data .= '</label>
 	    <div class="controls">
-		    <input id="ai_phone" maxlength="15" name="ai_phone" title="Phone" type="text" class="input-xlarge number '; 
+		    <input id="ai_phone" maxlength="15" name="ai_phone" title="'.__('Phone','aicontactform').'" type="text" class="input-xlarge number '; 
 			if(esc_attr(get_option('ai_enable_require_phone'))=="on") {$data .= 'required';} $data .= '">
 	    </div>
     </div>';
@@ -119,10 +119,10 @@ $data = '
     if(esc_attr(get_option('ai_visible_website'))=="on") {       
 	$data .= '
 	<div class="control-group">
-	<label class="control-label" for="ai_website">Website Url';
+	<label class="control-label" for="ai_website">'.__('Website Url','aicontactform');
 	if(esc_attr(get_option("ai_enable_require_website"))=="on"){ $data .= '<span class="req">*</span>'; } $data .= '</label>
 	    <div class="controls">
-		    <input id="ai_website" name="ai_website" title="Website Url" type="text" class="input-xlarge ';
+		    <input id="ai_website" name="ai_website" title="'.__('Website Url','aicontactform').'" type="text" class="input-xlarge ';
 			if(esc_attr(get_option('ai_enable_require_website'))=="on") { $data .= 'required';} $data .= '"onblur="replaceWeburl();">
 	    </div>
     </div>';
@@ -130,10 +130,10 @@ $data = '
 
     if(esc_attr(get_option('ai_visible_subject'))=="on") { 
     $data .= '<div class="control-group">
-	<label class="control-label" for="ai_subject">Subject';
+	<label class="control-label" for="ai_subject">'.__('Subject','aicontactform');
 	if(esc_attr(get_option('ai_enable_require_subject'))=="on"){ $data .= '<span class="req">*</span>'; } $data .= '</label>
 	    <div class="controls">
-	    	<input id="ai_subject" name="ai_subject" title="Subject" type="text" class="input-xlarge '; 
+	    	<input id="ai_subject" name="ai_subject" title="'.__('Subject','aicontactform').'" type="text" class="input-xlarge '; 
 			if(esc_attr(get_option('ai_enable_require_subject'))=="on") {$data .= 'required';} $data .= '"onblur="replaceSubject();">
 	    </div>
     </div>';
@@ -141,10 +141,10 @@ $data = '
 
     if(esc_attr(get_option('ai_visible_comment'))=="on") { 
     $data .= '<div class="control-group">
-	<label class="control-label" for="ai_comment">Comment';
+	<label class="control-label" for="ai_comment">'.__('Comment','aicontactform');
 	if(esc_attr(get_option('ai_enable_require_comment'))=="on"){ $data .= '<span class="req">*</span>'; } $data .= '</label>
       	<div class="controls">
-          <textarea id="ai_comment" name="ai_comment" title="Message" rows="4" class="';if(esc_attr(get_option('ai_enable_require_comment'))=="on"){$data .= 'required';} $data .= '" onblur="replaceComment();"></textarea>
+          <textarea id="ai_comment" name="ai_comment" title="'.__('Comment','aicontactform').'" rows="4" class="';if(esc_attr(get_option('ai_enable_require_comment'))=="on"){$data .= 'required';} $data .= '" onblur="replaceComment();"></textarea>
         </div>
     </div>';
 	} 
@@ -154,17 +154,17 @@ $data = '
     {
 	$data .= '
     <div class="control-group">
-    	<label class="control-label" for="captcha">Captcha<span class="req">*</span></label>
+    	<label class="control-label" for="captcha">'.__('Captcha','aicontactform').'<span class="req">*</span></label>
     <div class="controls">
     <div class="captcha-div"> 
-    	<img class="captcha" src="'.plugins_url("/responsive-contact-form/include").'/captcha_code_file.php?rand='.rand().'" id="captchaimg" onclick="javascript: refreshCaptcha();" alt="captcha">
-        <a href="javascript: refreshCaptcha();" data-toggle="tooltip" class="ttip" data-placement="right" data-original-title="Refresh Captcha Code">
+    	<img class="captcha" src="'.plugins_url("/responsive-contact-form/include").'/captcha_code_file.php?rand='.rand().'" id="captchaimg" onclick="javascript: refreshCaptcha();" alt="'.__('Captcha','aicontactform').'">
+        <a href="javascript: refreshCaptcha();" data-toggle="tooltip" class="ttip" data-placement="right" data-original-title="'.__('Refresh Captcha Code','aicontactform').'">
         <img id="refresh" src="'.plugins_url("/responsive-contact-form/images/refresh.png").'" alt="Refresh Code">
         </a>
-        <input type="text" id="captcha" title="Captcha Code" class="input-txt required" name="ai_captcha" maxlength="4" style="width:60px;">  
+        <input type="text" id="captcha" title="'.__('Captcha Code','aicontactform').'" class="input-txt required" name="ai_captcha" maxlength="4" style="width:60px;">  
     </div>
     <span id="note"><small>'.__("Captcha is not case sensitive.","aicontactform").'</small></span> 
-    <div class="alert alert-error" id="fmsg" style="display:none"></div>
+    <div class="alert alert-error" id="fmsg" style="display:none">'.__("<strong>Alert :</strong> Invalid captcha code!","aicontactform").'</div>
     <div class="clear"></div>
     </div>
     </div>';
@@ -173,13 +173,13 @@ $data = '
 	if(esc_attr(get_option('ai_visible_sendcopy'))=="on") { 
     $data .= '<div class="control-group">
 	  	<div class="controls">
-		<input type="checkbox" name="ai_sendcopy" id="ai_sendcopy" value="1">Send me a copy           
+		<input type="checkbox" name="ai_sendcopy" id="ai_sendcopy" value="1">'.__('Send me a copy','aicontactform').'           
         </div>
     </div>';
 	} 
     $data .= '<div class="control-group">
 		<div class="controls">
-			<button id="submit" name="submit" title="Click to submit the form" class="btn-submit" >
+			<button id="submit" name="submit" title="'.__('Click to submit the form','aicontactform').'" class="btn-submit" >
 			'.__('Submit','aicontactform').'
 		    </button>
 		</div>
