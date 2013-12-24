@@ -7,7 +7,7 @@ Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Responsive Contact Form is a simple WordPress plugin that generates a responsive contact form on your website or blog. 
+Multilingual Responsive Contact Form is a simple WordPress plugin that generates a responsive contact form on your website or blog.
 
 == Description ==
 
@@ -29,7 +29,7 @@ Features:
 * New export list of all user who contact site.
 * New send me a copy checkbox is added to form.
 * New added message from user in database and displayed in admin.  
-* New Language translations for English(default),German,Italian,Chinese,Turkish,Spanish have been updated in the back-end and front-end of the site. 
+* New Language translations for English(default), German, Italian, Chinese, Turkish, Spanish have been updated in the back-end and front-end of the site. Also you can add other languages based on your requirement.  
 
 Click here to view more about this plugin. [Visit blog post](http://softstribe.com/wordpress/how-to-add-responsive-contact-form-in-wordpress) 
 Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
