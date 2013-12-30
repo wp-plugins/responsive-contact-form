@@ -1,4 +1,4 @@
-=== Responsive Contact Form ===
+=== Multi-language Responsive Contact Form ===
 Contributors: augustinfotech
 Tags: Responsive Contact Form,Contact Form, text, contact, form, contacts, contact form, request, contact me, feedback form, feedback, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy
 Requires at least: 3.6
