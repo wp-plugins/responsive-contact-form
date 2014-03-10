@@ -1,333 +1,399 @@
-# Loco Gettext template
 msgid ""
 msgstr ""
-"Project-Id-Version: Responsive Contact Form\n"
+"Project-Id-Version: Responsive Contact Form v1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Wed Dec 18 2013 18:51:58 GMT+0530 (India Standard Time)\n"
-"POT-Revision-Date: Wed Dec 18 2013 18:52:00 GMT+0530 (India Standard Time)\n"
-"PO-Revision-Date: 2014-02-16 13:03+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2013-12-20 11:24:08+0000\n"
+"Last-Translator: admin <thomas@augustinfotechteam.com>\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
-"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
-"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
-"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
-"X-Generator: Poedit 1.6.4\n"
-"Language: nl_NL\n"
+"X-Poedit-Bookmarks: \n"
 "X-Poedit-SearchPath-0: ..\n"
+"X-Textdomain-Support: yes"
 
-#: ../ai-responsive-contact-form.php:179
+#: ai-responsive-contact-form.php:179
+#@ aicontactform
 msgid "AI Contact Form"
-msgstr "AI Contact Formulier"
+msgstr "AI Kontaktformular"
 
-#: ../ai-responsive-contact-form.php:181
+#: ai-responsive-contact-form.php:181
+#@ aicontactform
 msgid "User List"
-msgstr "Gebruikerslijst"
+msgstr "Benutzerliste"
 
-#: ../ai-responsive-contact-form.php:336
+#: ai-responsive-contact-form.php:336
+#@ aicontactform
 msgid "August Infotech"
 msgstr "August Infotech"
 
-#: ../ai-responsive-contact-form.php:348
+#: ai-responsive-contact-form.php:348
+#@ aicontactform
 msgid "Thank you for contacting us...We will get back to you soon..."
-msgstr ""
-"Bedankt dat u contact heeft opgenomen. Wij zullen zo spoedig mogelijk "
-"antwoorden."
+msgstr "Danke, dass Sie uns kontaktieren ... Wir werden Sie bald wieder ..."
 
-#: ../ai-responsive-contact-form.php:376
+#: ai-responsive-contact-form.php:376
+#@ aicontactform
 msgid "Reply : "
-msgstr "Antwoord:"
+msgstr "antworten :"
 
-#: ../ai-responsive-contact-form.php:394
+#: ai-responsive-contact-form.php:394
+#@ aicontactform
 msgid "User Details"
-msgstr "Gebruikerdetails"
+msgstr "Benutzerdetails"
 
-#: ../ai-responsive-contact-form.php:400
+#: ai-responsive-contact-form.php:400
+#@ aicontactform
 msgid "Name :"
-msgstr "Naam:"
+msgstr "Name :"
 
-#: ../ai-responsive-contact-form.php:406
+#: ai-responsive-contact-form.php:406
+#@ aicontactform
 msgid "Email ID :"
-msgstr "Email adres:"
+msgstr "E-Mail-ID :"
 
-#: ../ai-responsive-contact-form.php:412
+#: ai-responsive-contact-form.php:412
+#@ aicontactform
 msgid "Phone :"
-msgstr "Telefoon:"
+msgstr "Telefon :"
 
-#: ../ai-responsive-contact-form.php:420
+#: ai-responsive-contact-form.php:420
+#@ aicontactform
 msgid "Website Url :"
-msgstr "Website URL:"
+msgstr "Website-URL : "
 
-#: ../ai-responsive-contact-form.php:428
+#: ai-responsive-contact-form.php:428
+#@ aicontactform
 msgid "Subject :"
-msgstr "Onderwerp:"
+msgstr "Thema :"
 
-#: ../ai-responsive-contact-form.php:436
+#: ai-responsive-contact-form.php:436
+#@ aicontactform
 msgid "Comment : "
-msgstr "Bericht:"
+msgstr "Kommentar :"
 
-#: ../ai-responsive-contact-form.php:444
+#: ai-responsive-contact-form.php:444
+#@ aicontactform
 msgid " has contact us"
-msgstr "heeft contact opgenomen met ons"
+msgstr "hat Kontakt mit uns auf"
 
-#: ../ai-responsive-contact-form.php:459
+#: ai-responsive-contact-form.php:459
+#@ aicontactform
 msgid "Copy of form submitted"
-msgstr "Kopie van contactformulier"
+msgstr "Kopie von Formular eingereicht"
 
-#: ../include/ai-contact-form-template.php:89
+#: include/ai-contact-form-template.php:89
+#: include/ai-contact-form-template.php:95
+#@ aicontactform
 msgid "Name"
-msgstr "Naam"
+msgstr "Name"
 
-#: ../include/ai-contact-form-template.php:102
+#: include/ai-contact-form-template.php:102
+#: include/ai-contact-form-template.php:104
+#@ aicontactform
 msgid "Email ID"
-msgstr "Email adres"
+msgstr "E-Mail-ID"
 
-#: ../include/ai-contact-form-template.php:110
+#: include/ai-contact-form-template.php:110
+#: include/ai-contact-form-template.php:113
+#@ aicontactform
 msgid "Phone"
-msgstr "Telefoon"
+msgstr "Telefon"
 
-#: ../include/ai-contact-form-template.php:122
+#: include/ai-contact-form-template.php:122
+#: include/ai-contact-form-template.php:125
+#@ aicontactform
 msgid "Website Url"
-msgstr "Website Url"
+msgstr "Website-URL"
 
-#: ../include/ai-contact-form-template.php:133
+#: include/ai-contact-form-template.php:133
+#: include/ai-contact-form-template.php:136
+#@ aicontactform
 msgid "Subject"
-msgstr "Onderwerp"
+msgstr "Thema"
 
-#: ../include/ai-contact-form-template.php:144
+#: include/ai-contact-form-template.php:144
+#: include/ai-contact-form-template.php:147
+#@ aicontactform
 msgid "Comment"
-msgstr "Bericht"
+msgstr "Kommentar"
 
-#: ../include/ai-contact-form-template.php:157
+#: include/ai-contact-form-template.php:157
+#: include/ai-contact-form-template.php:160
+#@ aicontactform
 msgid "Captcha"
-msgstr "Captcha"
+msgstr "captcha-"
 
-#: ../include/ai-contact-form-template.php:166
+#: include/ai-contact-form-template.php:166
+#@ aicontactform
 msgid "Captcha is not case sensitive."
-msgstr "Captcha is niet hoofdlettergevoelig."
+msgstr "Captcha wird nicht zwischen Groß-und Kleinschreibung."
 
-#: ../include/ai-contact-form-template.php:176
+#: include/ai-contact-form-template.php:176
+#@ aicontactform
 msgid "Send me a copy"
-msgstr "Stuur mij een kopie"
+msgstr "Senden Sie mir eine Kopie"
 
-#: ../include/ai-contact-form-template.php:183
+#: include/ai-contact-form-template.php:183
+#@ aicontactform
 msgid "Submit"
-msgstr "Verstuur"
+msgstr "einreichen"
 
-#: ../include/ai_settings.php:19
+#: include/ai_settings.php:19
+#@ aicontactform
 msgid "Responsive Contact Form Settings"
-msgstr "Responsive Contact Formulier instellingen"
+msgstr "Responsive Kontaktformular Einstellungen"
 
-#: ../include/ai_settings.php:23
+#: include/ai_settings.php:23
+#@ aicontactform
 msgid "Settings"
-msgstr "Instellingen"
+msgstr "Einstellungen"
 
-#: ../include/ai_settings.php:41
+#: include/ai_settings.php:41
+#@ aicontactform
 msgid "<strong>Field Name</strong>"
-msgstr "<strong>Naam veld</strong>"
+msgstr "<strong> Feldname </ strong>"
 
-#: ../include/ai_settings.php:43
+#: include/ai_settings.php:43
+#@ aicontactform
 msgid "<strong>Select to Show / Hide Fields on form</strong>"
-msgstr "<strong>Selecteer een veld om deze te activeren</strong>"
+msgstr "<strong>Wählen Sie zum Show / Hide Felder auf dem Formular</strong>"
 
-#: ../include/ai_settings.php:45
+#: include/ai_settings.php:45
+#@ aicontactform
 msgid "<strong>Required / Not Required Fields</strong>"
-msgstr "<strong>Verplicht veld</strong>"
+msgstr "<strong> erforderlich ist / nicht Pflichtfelder </ strong>"
 
-#: ../include/ai_settings.php:51
+#: include/ai_settings.php:51
+#@ aicontactform
 msgid "Name:"
-msgstr "Naam:"
+msgstr "Name:"
 
-#: ../include/ai_settings.php:69
+#: include/ai_settings.php:69
+#@ aicontactform
 msgid "Phone:"
-msgstr "Telefoon:"
+msgstr "Telefon:"
 
-#: ../include/ai_settings.php:87
+#: include/ai_settings.php:87
+#@ aicontactform
 msgid "Website:"
 msgstr "Website:"
 
-#: ../include/ai_settings.php:105
+#: include/ai_settings.php:105
+#@ aicontactform
 msgid "Subject:"
-msgstr "Onderwerp:"
+msgstr "Betreff:"
 
-#: ../include/ai_settings.php:123
+#: include/ai_settings.php:123
+#@ aicontactform
 msgid "Comment:"
-msgstr "Commentaar:"
+msgstr "Kommentar:"
 
-#: ../include/ai_settings.php:141
+#: include/ai_settings.php:141
+#@ aicontactform
 msgid "Captcha:"
-msgstr "Captcha:"
+msgstr "Sicherheitscode:"
 
-#: ../include/ai_settings.php:149
-msgid ""
-"<strong>Note: </strong>Enable captcha sets by default it to required field."
-msgstr "<strong>Opmerking: </strong>Captcha is altijd een verplicht veld."
+#: include/ai_settings.php:149
+#@ aicontactform
+msgid "<strong>Note: </strong>Enable captcha sets by default it to required field."
+msgstr "<strong> Hinweis: </ strong> Enable Captcha setzt standardmäßig es um Pflichtfeld."
 
-#: ../include/ai_settings.php:157
+#: include/ai_settings.php:157
+#@ aicontactform
 msgid "Email:"
-msgstr "Email:"
+msgstr "E-Mail:"
 
-#: ../include/ai_settings.php:165
+#: include/ai_settings.php:165
+#@ aicontactform
 msgid "<strong>Note: </strong>Email field is mandatory."
-msgstr "<strong>Opmerking: </strong>Email is altijd een verplicht veld."
+msgstr "<strong> Hinweis: </ strong> E-Mail ist ein Pflichtfeld."
 
-#: ../include/ai_settings.php:170
+#: include/ai_settings.php:170
+#@ aicontactform
 msgid "Send me a copy:"
-msgstr "Stuur mij een kopie:"
+msgstr "Senden Sie mir eine Kopie:"
 
-#: ../include/ai_settings.php:177
+#: include/ai_settings.php:177
+#@ aicontactform
 msgid "<strong>Note: </strong>Select to show checkbox on form."
-msgstr ""
-"<strong>Opmerking: </strong>Selecteer om een checkbox op het formulier te "
-"maken wat de gebruiker een kopie laat sturen naar zichzelf."
+msgstr "<strong> Hinweis: </ strong> Wählen Sie, um das Kontrollkästchen auf dem Formular zu zeigen."
 
-#: ../include/ai_settings.php:203
+#: include/ai_settings.php:203
+#@ aicontactform
 msgid "Email Address:"
-msgstr "Email adres(sen) ontvanger(s):"
+msgstr "E-Mail-Adresse:"
 
-#: ../include/ai_settings.php:213
-msgid ""
-"<strong>Note:</strong> You can add multiple email addresses seperated by "
-"comma, to send email to multiple users."
-msgstr ""
-"<strong>Opmerking:</strong> Je kan meerdere email adressen toevoegen, "
-"gescheiden door een komma, om een mail naar meerdere adressen te sturen."
+#: include/ai_settings.php:213
+#@ aicontactform
+msgid "<strong>Note:</strong> You can add multiple email addresses seperated by comma, to send email to multiple users."
+msgstr "<strong> Hinweis: </ strong> Sie können mehrere E-Mail-Adressen durch Komma getrennt hinzuzufügen, um E-Mail an mehrere Benutzer zu senden."
 
-#: ../include/ai_settings.php:221
+#: include/ai_settings.php:221
+#@ aicontactform
 msgid "Subject Text:"
-msgstr "Onderwerp antwoordbericht:"
+msgstr "Betreff Text:"
 
-#: ../include/ai_settings.php:231
-msgid ""
-"<strong>Note:</strong> Default subject text \" August Infotech \" will be "
-"used."
-msgstr ""
-"<strong>Opmerking:</strong> Indien leeg gelaten, zal de standaard tekst\" "
-"August Infotech\" zal gebruikt worden."
+#: include/ai_settings.php:231
+#@ aicontactform
+msgid "<strong>Note:</strong> Default subject text \" August Infotech \" will be used."
+msgstr "<strong> Hinweis: </ strong> Standard-Betrefftext \\ \\\"August Infotech \" verwendet werden."
 
-# Made by Tobro All Media Solutions - www.tobro-ams.com
-#: ../include/ai_settings.php:239
+#: include/ai_settings.php:239
+#@ aicontactform
 msgid "Reply Message for User:"
-msgstr "Inhoud antwoordbericht:"
+msgstr "Antwort Nachricht für Benutzer:"
 
-#: ../include/ai_settings.php:251
-msgid ""
-"<strong>Note:</strong> Default Reply Message \" Thank you for contacting "
-"us...We will get back to you soon... \" will be used."
-msgstr ""
-"<strong>Opmerking:</strong> Indien leeg gelaten, zal het standaard "
-"antwoordbericht \"Bedankt dat u contact heeft opgenomen. Wij zullen zo "
-"spoedig mogelijk antwoorden.\" gebruikt worden."
+#: include/ai_settings.php:251
+#@ aicontactform
+msgid "<strong>Note:</strong> Default Reply Message \" Thank you for contacting us...We will get back to you soon... \" will be used."
+msgstr "<strong> Hinweis: </ strong> Standardantwort Nachricht \\ \\\"Vielen Dank für die Kontaktaufnahme mit uns ... Wir werden in Kürze mit Ihnen in Verbindung ... \" verwendet werden."
 
-#: ../include/ai_settings.php:267
+#: include/ai_settings.php:267
+#@ aicontactform
 msgid "Save All Changes"
-msgstr "Sla wijzigingen op"
+msgstr "Alle Änderungen speichern"
 
-#: ../include/ai_settings.php:277
-msgid ""
-"<strong>Note:</strong> You can add <strong> [ai_contact_form] </strong> "
-"shortcode where you want to display contact form in pages."
-msgstr ""
-"<strong>Opmerking:</strong> Je kunt de shortcode <strong> [ai_contact_form] "
-"</strong> in een pagina toevoegen om het contactformulier te laten zien."
+#: include/ai_settings.php:277
+#@ aicontactform
+msgid "<strong>Note:</strong> You can add <strong> [ai_contact_form] </strong> shortcode where you want to display contact form in pages."
+msgstr "<strong> Hinweis: </ strong> Sie können hinzufügen <strong> [ai contact_form] </ strong> Kurzwahl, wo Sie Kontakt-Formular auf den Seiten angezeigt werden sollen."
 
-#: ../include/ai_settings.php:279
-msgid ""
-" <br/> OR  You can add <strong> &lt;&#63;php "
-"do_shortcode(\"[ai_contact_form]\"); &#63;&gt;</strong> shortcode in any "
-"template."
-msgstr ""
-" <br/> Of je kunt de shortcode <strong> &lt;&#63;php "
-"do_shortcode(\"[ai_contact_form]\"); &#63;&gt;</strong> toevoegen in een "
-"template."
+#: include/ai_settings.php:279
+#@ aicontactform
+msgid " <br/> OR  You can add <strong> &lt;&#63;php do_shortcode(\"[ai_contact_form]\"); &#63;&gt;</strong> shortcode in any template."
+msgstr "<br/> ODER Sie können <strong> hinzufügen &lt;&#63;php do_shortcode (\"[ai_contact_form] \");&#63;&gt; </ strong> Short in jeder Vorlage."
 
-#: ../include/ai_settings.php:281
-msgid ""
-" <br/> OR  You can add <strong> &lt;&#63;php echo "
-"do_shortcode(\"[ai_contact_form]\"); &#63;&gt;</strong> shortcode in any "
-"template."
-msgstr ""
-" <br/> Of je kunt de shortcode <strong> &lt;&#63;php echo "
-"do_shortcode(\"[ai_contact_form]\"); &#63;&gt;</strong> toevoegen in een "
-"template."
+#: include/ai_settings.php:281
+#@ aicontactform
+msgid " <br/> OR  You can add <strong> &lt;&#63;php echo do_shortcode(\"[ai_contact_form]\"); &#63;&gt;</strong> shortcode in any template."
+msgstr "<br/> ODER Sie können <strong> hinzufügen &lt;&#63;php echo do_shortcode (\"[ai_contact_form] \");&#63;&gt;</ strong> Short in jeder Vorlage."
 
-#: ../include/ai_user_list.php:10
+#: include/ai_user_list.php:10
+#@ aicontactform
 msgid "User Record Deleted."
-msgstr "Gebruikergegevens verwijderd."
+msgstr "User-Datensatz gelöscht."
 
-#: ../include/ai_user_list.php:15
+#: include/ai_user_list.php:15
+#@ aicontactform
 msgid "List of User Records"
-msgstr "Lijst van gebruikergegevens"
+msgstr "Liste der Benutzerdatensätze"
 
-#: ../include/ai_user_list.php:16
+#: include/ai_user_list.php:16
+#@ aicontactform
 msgid "Export User Records"
-msgstr "Exporteer gebruikergegevens"
+msgstr "Export-Benutzerdatensätze"
 
-#: ../include/ai_user_list.php:22
+#: include/ai_user_list.php:22
+#@ aicontactform
 msgid "From Date"
-msgstr "Van datum"
+msgstr "von-Datum"
 
-#: ../include/ai_user_list.php:22 ../include/ai_user_list.php:25
+#: include/ai_user_list.php:22
+#: include/ai_user_list.php:25
+#@ aicontactform
 msgid "(Format: MM-DD-YYYY)"
-msgstr "(Formaat: MM-DD-YYY)"
+msgstr "(Format: MM-DD-YYYY)"
 
-#: ../include/ai_user_list.php:25
+#: include/ai_user_list.php:25
+#@ aicontactform
 msgid "To Date"
-msgstr "Tot datum"
+msgstr "To Date"
 
-#: ../include/ai_user_list.php:28
+#: include/ai_user_list.php:28
+#@ aicontactform
 msgid "Go"
-msgstr "Ga"
+msgstr "gehen"
 
-#: ../include/ai_user_list.php:29
+#: include/ai_user_list.php:29
+#@ aicontactform
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "stornieren"
 
-#: ../include/ai_user_list.php:36
-msgid ""
-"Please click on column's title to sort the data according to specific "
-"column !!!"
-msgstr "U kunt de gegevens sorteren per kolom door op de kolom te klikken."
+#: include/ai_user_list.php:36
+#@ aicontactform
+msgid "Please click on column's title to sort the data according to specific column !!!"
+msgstr "Bitte klicken Sie auf den Spaltentitel , um die Daten nach bestimmten Spalte zu sortieren!"
 
-#: ../include/ai_user_list.php:39
+#: include/ai_user_list.php:39
+#@ aicontactform
 msgid "Sr. No"
-msgstr "Nr."
+msgstr "Sr. Nein"
 
-#: ../include/ai_user_list.php:40 ../include/userlist_export.php:20
+#: include/ai_user_list.php:40
+#: include/userlist_export.php:20
+#@ aicontactform
 msgid "Username"
-msgstr "Gebruikersnaam"
+msgstr "Benutzername"
 
-#: ../include/ai_user_list.php:41 ../include/userlist_export.php:21
+#: include/ai_user_list.php:41
+#: include/userlist_export.php:21
+#@ aicontactform
 msgid "Email Address"
-msgstr "Email adres"
+msgstr "E-Mail-Adresse"
 
-#: ../include/ai_user_list.php:42 ../include/userlist_export.php:22
+#: include/ai_user_list.php:42
+#: include/userlist_export.php:22
+#@ aicontactform
 msgid "Message"
-msgstr "Bericht"
+msgstr "Nachricht"
 
-#: ../include/ai_user_list.php:43 ../include/userlist_export.php:23
+#: include/ai_user_list.php:43
+#: include/userlist_export.php:23
+#@ aicontactform
 msgid "Contact Date"
-msgstr "Contactdatum"
+msgstr "Kontakt Datum"
 
-#: ../include/ai_user_list.php:44
+#: include/ai_user_list.php:44
+#@ aicontactform
 msgid "Action"
-msgstr "Actie"
+msgstr "Aktion"
 
-#: ../include/ai_user_list.php:98
+#: include/ai_user_list.php:98
+#@ aicontactform
 msgid "No User Records Found !!! "
-msgstr "Geen gebruikergegevens gevonden!"
+msgstr "Keine Benutzer Einträge gefunden!"
 
-#: ../include/userlist_export.php:16
+#: include/userlist_export.php:16
+#@ aicontactform
 msgid "List Of Users Contacted Site"
-msgstr "Lijst van gebruikers die de site hebben gecontacteerd"
+msgstr "Liste der Benutzer der Website kontaktiert"
 
-#: ../include/userlist_export.php:19
+#: include/userlist_export.php:19
+#@ aicontactform
 msgid "User ID"
-msgstr "Gebruikers ID"
+msgstr "Benutzer-ID"
+
+#: include/ai-contact-form-template.php:164
+#@ aicontactform
+msgid "Captcha Code"
+msgstr "captcha Code"
+
+#: include/ai-contact-form-template.php:182
+#@ aicontactform
+msgid "Click to submit the form"
+msgstr "Klicken Sie hier um das Formular abschicken"
+
+#: include/ai-contact-form-template.php:161
+#@ aicontactform
+msgid "Refresh Captcha Code"
+msgstr "Aktualisieren Captcha Code"
+
+#: include/ai-contact-form-template.php:85
+#@ aicontactform
+msgid "<strong>Succeed :</strong>Your details are submitted successfully!"
+msgstr "<strong>Erfolg haben:</strong> Ihre Angaben werden erfolgreich!"
+
+#: include/ai-contact-form-template.php:167
+#@ aicontactform
+msgid "<strong>Alert :</strong> Invalid captcha code!"
+msgstr "<strong>Benachrichtigung:</strong> Ungültige Captcha-Code ein!"
+
