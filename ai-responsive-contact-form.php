@@ -252,9 +252,6 @@ add_action( 'admin_enqueue_scripts', 'ai_scripts' );
 if(!is_admin()){
 
 	wp_localize_script( 'my-ajax-request', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );	
-
-	wp_enqueue_script( 'my-ajax-request', plugins_url('/js/ajax.js' , __FILE__), array( 'jquery' ), '', true );
-
 }
 
 
