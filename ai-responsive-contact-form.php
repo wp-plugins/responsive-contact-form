@@ -376,7 +376,8 @@ function ai_action_call(){
 
 	$ai_headers .= "Content-type: text/html; charset=iso-8859-1\n";
 
-	$ai_headers .= "From:".get_bloginfo('name')." ".$ai_emailadmin."\n";
+	//$ai_headers .= "From:".get_bloginfo('name')." ".$ai_emailadmin."\n";
+	$ai_headers .= "From:".get_bloginfo('name')." <".$ai_emailadmin.">\n";
 
 	$ai_headers .= "Message-Id: <".time()."@".$_SERVER['SERVER_NAME'].">\n";
 
@@ -447,7 +448,8 @@ function ai_action_call(){
 	$ai_admin_headers .= "Content-type: text/html; charset=iso-8859-1\n";	
 
 	//$ai_admin_headers .= "From: ".str_replace(' ', '-', $ai_name)."\n";
-	$ai_admin_headers .= "From: ".str_replace(' ', '-', $ai_name)." ".$ai_email."\n";
+	//$ai_admin_headers .= "From: ".str_replace(' ', '-', $ai_name)." ".$ai_email."\n";
+	$ai_admin_headers .= "From: ".$ai_name." <".$ai_email.">\n";
 
 	$ai_admin_headers .= "Message-Id: <".time()."@".$_SERVER['SERVER_NAME'].">\n";
 
@@ -457,12 +459,12 @@ function ai_action_call(){
 
 	if($arr == 1){		
 
-		mail($ai_email, $ai_subject_mail, $ai_reply_msg, $ai_headers);
+		wp_mail($ai_email, $ai_subject_mail, $ai_reply_msg, $ai_headers);
 		if($sendcopy == 1){
-			mail($ai_email, $ai_usercopy_subject, $ai_admin_usermsg, $ai_admin_headers);
+			wp_mail($ai_email, $ai_usercopy_subject, $ai_admin_usermsg, $ai_admin_headers);
 		}
 
-		mail($ai_emailadmin, $ai_admin_subject, $ai_admin_usermsg, $ai_admin_headers);
+		wp_mail($ai_emailadmin, $ai_admin_subject, $ai_admin_usermsg, $ai_admin_headers);
 
 		$date = date("Y-m-d");
 

@@ -1,6 +1,8 @@
 <?php
 function contactFormShortcode(){ 
-wp_enqueue_script( 'my-ajax-request', plugins_url('/js/ajax.js' , __FILE__), array( 'jquery' ), '', true );
+//wp_enqueue_script( 'my-ajax-request', plugins_url('/js/ajax.js' , __FILE__), array( 'jquery' ), '', true );
+
+wp_enqueue_script( 'my-ajax-request', plugins_url('/responsive-contact-form/js/ajax.js'), array( 'jquery' ));
 
 wp_register_script( 'jquery.validate', plugins_url().'/responsive-contact-form/js/jquery.validate.js',array('jquery'));
 
