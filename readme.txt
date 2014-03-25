@@ -3,7 +3,7 @@ Contributors: augustinfotech
 Tags: Responsive Contact Form,Contact Form, text, contact, form, contacts, contact form, request, contact me, feedback form, feedback, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy
 Requires at least: 3.6
 Tested up to: 3.8
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,7 @@ Features:
 * New send me a copy checkbox is added to form.
 * New added message from user in database and displayed in admin.  
 * New Language translations for English(default), German, Italian, Chinese, Turkish, Spanish have been updated in the back-end and front-end of the site. Also you can add other languages based on your requirement.  
+* Manage form style/CSS from admin pannel.
 
 Click here to view more about this plugin. [Visit blog post](http://softstribe.com/wordpress/how-to-add-responsive-contact-form-in-wordpress) 
 Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
@@ -77,6 +78,8 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 = 1.5 =
 * Added Language translations for English(default),German,Italian,Chinese,Turkish,Spanish have been updated in the back-end and front-end of the site. 
 
+= 1.6 =
+* Added form custom style/CSS feature into admin panel.
 
 == Upgrade Notice ==
 * Upgrade Notice Notification

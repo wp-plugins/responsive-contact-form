@@ -13,7 +13,6 @@ wp_enqueue_style('wp-contact',  plugins_url('/responsive-contact-form/css/contac
 wp_head();
 
 ?>
-
 <script type="text/javascript">
 
 	var MyAjax = "<?php echo home_url(); ?>/wp-admin/admin-ajax.php";
@@ -83,7 +82,17 @@ wp_head();
 	}
 
 </script>
+<?php
+$ai_custom_css = get_option('ai_custom_css');
+
+if($ai_custom_css)
+{?>
+<style>
+<?php echo $ai_custom_css;
+?>
+</style>
 <?php 
+}//end of if for style tag
 $data = '
 	<div class="responsive-contact-form">
 	<div class="alert alert-success" id="smsg" style="display:none">'.__("<strong>Succeed :</strong>Your details are submitted successfully!","aicontactform").'</div>
