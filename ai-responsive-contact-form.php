@@ -17,6 +17,7 @@ Author: August Infotech
 Author URI: http://www.augustinfotech.com
 
 */
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 define('AI_PDIR_PATH',plugin_dir_path(__FILE__ ));
 
@@ -484,13 +485,33 @@ function ai_action_call(){
 
 			$wpdb->insert( $table_name, array("email_id" => $ai_email, "message" => $ai_comment, "contact_date" => $date ));
 
+		}
+		
+		//Added contact request data into mailchimp database if mailchimp extension is active
+		
+		//Check whether mailchimpl extension for Contact plugin is active or not
+		if ( is_plugin_active('responsive-contact-form-mailchimp-extension/ai-responsive-contact-form-mailchimp-extension.php' ) )
+		{
+			
+				$apikey = esc_attr(get_option('ai_me_contactform_api_key'));
+
+				$active_mail_chimp =  get_option('aimclists') ;
+				
+				require_once( WP_PLUGIN_DIR . '/responsive-contact-form-mailchimp-extension/admin/includes/AIMCAPI.class.php');
+				
+				$storedata = new AIMCAPI($apikey);
+				
+				if($active_mail_chimp)
+				{
+					foreach($active_mail_chimp as $list_id => $list_val) {
+					
+						$storedata->listSubscribe($list_id,$ai_email);
+					}
+				}	
 		}	
 
 	}
-
 	echo json_encode($arr);	
-
 	die(); 	
-
 }
 ?>
