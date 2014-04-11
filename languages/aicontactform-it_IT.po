@@ -145,7 +145,7 @@ msgstr "Inviami una copia"
 #: include/ai-contact-form-template.php:183
 #@ aicontactform
 msgid "Submit"
-msgstr "presentare"
+msgstr "INVIA"
 
 #: include/ai_settings.php:19
 #@ aicontactform
