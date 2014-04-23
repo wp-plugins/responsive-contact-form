@@ -26,8 +26,8 @@ Features:
 * You can choose where to send the messages - this can be any email address.
 * You can choose the message to be displayed after successful submission of form Ex.-Your details are submitted successfully!.
 * Easy to call using two method one is using shortcode [ai_contact_form] and other using paste this php code 
-  <?php do_shortcode("[ai_contact_form]"); ?> or <?php echo do_shortcode("[ai_contact_form]"); ?>
-* New easily manage fields to be displyed on form.
+  <?php do_shortcode("[ai_contact_form]"); ?> or < ? php echo do_shortcode("[ai_contact_form]"); ? >
+* New easily manage fields to be displayed on form.
 * New export list of all user who contact site.
 * New send me a copy checkbox is added to form.
 * New added message from user in database and displayed in admin.  
