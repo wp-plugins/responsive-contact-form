@@ -100,6 +100,11 @@ function ai_register_fields(){
 	register_setting( 'ai-fields', 'ai_visible_sendcopy' );
 	
 	register_setting( 'ai-fields', 'ai_custom_css' );
+	
+	register_setting( 'ai-fields', 'ai_rm_user_list' );
+	
+	register_setting( 'ai-fields', 'ai_success_message' );
+	
 
 }
 
@@ -147,6 +152,10 @@ function ai_contact_form_uninstall(){
 	delete_option('ai_enable_require_comment');
 		 
 	delete_option('ai_visible_sendcopy');	 
+	
+	delete_option('ai_rm_user_list');	 
+	
+	delete_option('ai_success_message');	 
 
 	global $wpdb;	
 
@@ -182,8 +191,13 @@ add_action('admin_menu','ai_contact_setting');
 function ai_contact_setting(){
 
 	add_menu_page(__('AI Contact Form','aicontactform'),__('AI Contact Form','aicontactform'),'manage_options','ai_contact','ai_contact_settings','');
-	global $page_options;
-	$page_options = add_submenu_page('ai_contact', __('User List','aicontactform'), __('User List','aicontactform'),'manage_options', 'ai_user_lists', 'ai_user_list');
+	
+	$ai_enable_user = get_option('ai_rm_user_list');	
+
+	if($ai_enable_user != 'on'){
+	   global $page_options;
+	   $page_options = add_submenu_page('ai_contact', __('User List','aicontactform'), __('User List','aicontactform'),'manage_options', 'ai_user_lists', 'ai_user_list');
+	}   
 }
 
 add_action('admin_enqueue_scripts', 'load_admin_scripts');
@@ -476,6 +490,12 @@ function ai_action_call(){
 		$table_name = $wpdb->prefix."ai_contact";
 
 		$date = current_time( 'mysql' );
+		
+		// Not Inserted User data into database if user list checkbox is checked.
+		
+		$ai_insert_user = get_option('ai_rm_user_list');	
+		
+		if($ai_insert_user != 'on'){
 
 		if($ai_name != 'User' && $ai_name != ''){
 
@@ -485,7 +505,8 @@ function ai_action_call(){
 
 			$wpdb->insert( $table_name, array("email_id" => $ai_email, "message" => $ai_comment, "contact_date" => $date ));
 
-		}
+			}
+		}	
 		
 		//Added contact request data into mailchimp database if mailchimp extension is active
 		

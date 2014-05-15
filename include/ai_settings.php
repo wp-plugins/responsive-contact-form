@@ -66,6 +66,16 @@
             <td class="field-status"><input type="checkbox" align="left" name="ai_visible_sendcopy" id="ai_visible_sendcopy" <?php if(esc_attr(get_option('ai_visible_sendcopy'))=="on"){echo "checked";} ?>  /></td>
             <td><?php _e('<strong>Note: </strong>Select to show checkbox on form.','aicontactform');?></td>
           </tr>
+		  <tr>
+            <th class="field-name"><?php _e('Remove user list:','aicontactform');?></th>
+            <td class="field-status"><input type="checkbox" align="left" name="ai_rm_user_list" id="ai_rm_user_list" <?php if(esc_attr(get_option('ai_rm_user_list'))=="on"){echo "checked";} ?>  /></td>
+            <td><?php _e('<strong>Note: </strong>Select checkbox to remove user list which connected to your website.','aicontactform');?></td>
+          </tr>
+		  <tr>
+            <th class="field-name"><?php _e('Success Message Display:','aicontactform');?></th>
+            <td class="field-status"><input type="checkbox" align="left" name="ai_success_message" id="ai_success_message" <?php if(esc_attr(get_option('ai_success_message'))=="on"){echo "checked";} ?>  /></td>
+            <td><?php _e('<strong>Note: </strong>Select checkbox to show the message displayed after successful submission below.','aicontactform');?></td>
+          </tr>
           <tr>
             <td colspan="3"></td>
           </tr>

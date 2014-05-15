@@ -94,9 +94,14 @@ if($ai_custom_css)
 <?php 
 }//end of if for style tag
 $data = '
-	<div class="responsive-contact-form">
-	<div class="alert alert-success" id="smsg" style="display:none">'.__("<strong>Succeed :</strong>Your details are submitted successfully!","aicontactform").'</div>
-	<form class="form-horizontal" name="formValidate" id="ResponsiveContactForm" method="post" >
+	<div class="responsive-contact-form">';
+	
+	if(get_option('ai_success_message')!="on") { 
+	 
+	 $data .= '<div class="alert alert-success" id="smsg" style="display:none">'.__("<strong>Succeed :</strong>Your details are submitted successfully!","aicontactform").'</div>';
+	} 
+	
+	$data .= '<form class="form-horizontal" name="formValidate" id="ResponsiveContactForm" method="post" >
     <fieldset>';
 	if(esc_attr(get_option("ai_visible_name"))=="on") {
     	$data .= '<div class="control-group"><label class="control-label" for="ai_name">'.__('Name','aicontactform');
@@ -198,8 +203,11 @@ $data = '
 		</div>
 	</div>
 	</fieldset>
-  </form>
-</div>';
+  </form>';
+  if(get_option('ai_success_message')=="on") { 
+	   $data .= '<div class="alert alert-success" id="smsg" style="display:none">'.__("<strong>Succeed :</strong>Your details are submitted successfully!","aicontactform").'</div>
+	</div>';
+ }
 return $data;
 }
 ?>

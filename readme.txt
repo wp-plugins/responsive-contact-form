@@ -2,8 +2,8 @@
 Contributors: augustinfotech
 Tags: Responsive Contact Form,Contact Form, text, contact, form, contacts, contact form, request, contact me, feedback form, feedback, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy
 Requires at least: 3.6
-Tested up to: 3.8
-Stable tag: 1.7
+Tested up to: 3.9.1
+Stable tag: 1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -86,11 +86,14 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 = 1.7 =
 * Added Mailchimp extension feature for contact form into admin panel.
 
+= 1.8 =
+* remove userlist and success message settings feature for contact form into admin panel.
+
 
 == Upgrade Notice ==
 * Upgrade Notice Notification
 * Fixed issue of deleting record and on uninstallallation deletion of all fields data and table.
 * Fixed the issue of textarea focus in the middle.
 * Added message from user in database and displayed in admin. 
-* Compatible in wordpress 3.8
+* Compatible in wordpress 3.9.1
 * Backup languages folder.
