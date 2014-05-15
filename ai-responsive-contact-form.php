@@ -8,7 +8,7 @@ Plugin URI: http://www.augustinfotech.com
 
 Description: Add Contact Form to your WordPress website.You can add [ai_contact_form] shortcode where you want to display contact form.OR You can add  do_shortcode("[ai_contact_form]"); shortcode in any template.
 
-Version: 1.7
+Version: 1.8
 
 Text Domain: aicontactform
 
