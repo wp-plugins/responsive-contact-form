@@ -1,5 +1,4 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'].'/wp-load.php' );
 global $wpdb;
 $table_name = $wpdb->prefix . "ai_contact";
 $act=$_REQUEST["act"];	

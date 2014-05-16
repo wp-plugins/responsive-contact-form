@@ -64,6 +64,8 @@ function ai_register_fields(){
 	
 	//wp_register_style( 'jquery-ui',  plugins_url('/responsive-contact-form/css/jquery-ui.css') );	
 	//wp_register_style( 'jquery-ui',  '//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css' );	
+	
+	include_once($_SERVER['DOCUMENT_ROOT'].'/wp-load.php' );
 
 	register_setting( 'ai-fields', 'ai_email_address_setting' );
 
