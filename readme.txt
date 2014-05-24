@@ -11,7 +11,7 @@ Multilingual Responsive Contact Form is a simple WordPress plugin that generates
 
 == Description ==
 
-> Mailchimp extension of Responsive Contact Form is available to add your contact data to your Mailchimp account : [Visit Plugin Link]    (http://wordpress.org/plugins/responsive-contact-form-mailchimp-extension/)
+> Mailchimp extension of Responsive Contact Form is available to add your contact data to your Mailchimp account : [Visit Plugin Link](http://wordpress.org/plugins/responsive-contact-form-mailchimp-extension/)
 
 > Like our plugin page on facebook to receive notifications and updates. You can also post queries and request for support.[Like Plugin Page On Facebook](http://www.facebook.com/responsive.contact.form?ref=hl)
 
