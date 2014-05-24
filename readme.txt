@@ -13,7 +13,7 @@ Multilingual Responsive Contact Form is a simple WordPress plugin that generates
 
 > Mailchimp extension of Responsive Contact Form is available to add your contact data to your Mailchimp account : [Visit Plugin Link]    (http://wordpress.org/plugins/responsive-contact-form-mailchimp-extension/)
 
-> Like our plugin page on facebook to receive notifications and updates. You can also post queries and request for support. [Visit Plugin Link]    (https://www.facebook.com/responsive.contact.form?ref=hl)
+> Like our plugin page on facebook to receive notifications and updates. You can also post queries and request for support.[Like Plugin Page On Facebook](http://www.facebook.com/responsive.contact.form?ref=hl)
 
 Contact Us Form is a simple WordPress plugin that generates a responsive contact form on your website or blog.simply insert [ai_contact_form] in any page or post content and the form will appear or paste this php code <?php do_shortcode("[ai_contact_form]"); ?> or <?php echo do_shortcode("[ai_contact_form]"); ?>in any template.
 
