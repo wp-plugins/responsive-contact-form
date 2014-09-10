@@ -83,7 +83,7 @@ msgstr "Nachricht:"
 
 # @ aicontactform
 #: ai-responsive-contact-form.php:444
-msgid " has contact us"
+msgid " has contacted us"
 msgstr "hat uns kontaktiert"
 
 # @ aicontactform

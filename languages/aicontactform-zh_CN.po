@@ -84,7 +84,7 @@ msgstr "評論："
 
 #: ai-responsive-contact-form.php:444
 #@ aicontactform
-msgid " has contact us"
+msgid " has contacted us"
 msgstr "已經與我們聯繫"
 
 #: ai-responsive-contact-form.php:459

@@ -74,7 +74,7 @@ msgid "Comment : "
 msgstr "Bericht:"
 
 #: ../ai-responsive-contact-form.php:444
-msgid " has contact us"
+msgid " has contacted us"
 msgstr "heeft contact opgenomen met ons"
 
 #: ../ai-responsive-contact-form.php:459

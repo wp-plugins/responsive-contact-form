@@ -82,7 +82,7 @@ msgstr "commento :"
 
 #: ai-responsive-contact-form.php:444
 #@ aicontactform
-msgid " has contact us"
+msgid " has contacted us"
 msgstr "ha contattaci"
 
 #: ai-responsive-contact-form.php:459

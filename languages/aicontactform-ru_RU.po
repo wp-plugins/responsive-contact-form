@@ -77,7 +77,7 @@ msgstr "Сообщение: "
 
 #: ai-responsive-contact-form.php:461
 #@ aicontactform
-msgid " has contact us"
+msgid " has contacted us"
 msgstr " связался с Вами"
 
 #: ai-responsive-contact-form.php:477
