@@ -94,7 +94,7 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 * remove userlist and success message settings feature for contact form into admin panel.
 
 = 1.9 =
-* Resolved grammer mistakes and check the compatibilty in wordpress 4.0.
+* Resolved grammer mistakes and captcha display issue.
 
 
 == Upgrade Notice ==
