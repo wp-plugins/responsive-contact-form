@@ -4,7 +4,7 @@
 Plugin Name: Responsive Contact Form
 Plugin URI: http://www.augustinfotech.com
 Description: Add Contact Form to your WordPress website.You can add [ai_contact_form] shortcode where you want to display contact form.OR You can add  do_shortcode("[ai_contact_form]"); shortcode in any template.
-Version: 1.9
+Version: 2.0
 Text Domain: aicontactform
 Author: August Infotech
 Author URI: http://www.augustinfotech.com
@@ -51,10 +51,7 @@ function ai_contact_init(){
 add_action('admin_init', 'ai_register_fields' );
 function ai_register_fields(){
 	
-	//wp_register_style( 'jquery-ui',  plugins_url('/responsive-contact-form/css/jquery-ui.css') );	
-	//wp_register_style( 'jquery-ui',  '//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css' );	
-	
-	include_once( $_SERVER['DOCUMENT_ROOT'].'/wp-load.php' );
+	include_once( get_home_path().'/wp-load.php' );
 	register_setting( 'ai-fields', 'ai_email_address_setting' );
 	register_setting( 'ai-fields', 'ai_subject_text' );
 	register_setting( 'ai-fields', 'ai_reply_user_message' );
@@ -176,7 +173,6 @@ function ai_scripts(){
 	wp_enqueue_script( 'ai_script_table', plugins_url('/js/jquery.dataTables.js' , __FILE__), array( 'jquery' ) );
 	wp_enqueue_script( 'jquery-ui', plugins_url('/js/jquery-ui.js' , __FILE__), array( 'jquery' ) );
 	wp_enqueue_style('wp-datatable',  plugins_url('/responsive-contact-form/css/data_table.css'));
-	//wp_enqueue_style('jquery-ui',  plugins_url('/responsive-contact-form/css/jquery-ui.css'));
 	wp_enqueue_style('jquery-ui');
 }  
 
@@ -262,7 +258,6 @@ function ai_action_call(){
 	$ai_subject_mail = __('Reply : ','aicontactform').$ai_subtext;			
 	$ai_headers = "MIME-Version: 1.0\n";
 	$ai_headers .= "Content-type: text/html; charset=iso-8859-1\n";
-	//$ai_headers .= "From:".get_bloginfo('name')." ".$ai_emailadmin."\n";
 	$ai_headers .= "From:".get_bloginfo('name')." <".$ai_emailadmin.">\n";
 	$ai_headers .= "Message-Id: <".time()."@".$_SERVER['SERVER_NAME'].">\n";
 	$ai_headers .= "X-Mailer: php-mail-function-0.2\n";
@@ -298,15 +293,9 @@ function ai_action_call(){
 	$ai_admin_subject = $ai_name.__(' has contacted us','aicontactform');		
 
 	$ai_admin_headers = "MIME-Version: 1.0\n";
-
 	$ai_admin_headers .= "Content-type: text/html; charset=iso-8859-1\n";	
-
-	//$ai_admin_headers .= "From: ".str_replace(' ', '-', $ai_name)."\n";
-	//$ai_admin_headers .= "From: ".str_replace(' ', '-', $ai_name)." ".$ai_email."\n";
 	$ai_admin_headers .= "From: ".$ai_name." <".$ai_email.">\n";
-
 	$ai_admin_headers .= "Message-Id: <".time()."@".$_SERVER['SERVER_NAME'].">\n";
-
 	$ai_admin_headers .= "X-Mailer: php-mail-function-0.2\n";
 
 	$ai_usercopy_subject = __('Copy of form submitted','aicontactform');
