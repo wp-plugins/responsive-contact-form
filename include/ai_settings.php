@@ -1,5 +1,5 @@
 <style>
-.wrap h3 { margin-bottom:0; }
+.wrap h3 { margin-bottom:0; color: #222; border:0; }
 #form-settings { border-top: 5px solid #dfdfdf; }
 #form-settings .field-name { font-weight: bold; width: 60px; text-align:right; }
 #form-settings .field-status { width: 60px; text-align:center; }
