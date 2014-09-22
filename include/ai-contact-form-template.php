@@ -1,86 +1,49 @@
 <?php
 function contactFormShortcode(){ 
-//wp_enqueue_script( 'my-ajax-request', plugins_url('/js/ajax.js' , __FILE__), array( 'jquery' ), '', true );
-
-wp_enqueue_script( 'my-ajax-request', plugins_url('/responsive-contact-form/js/ajax.js'), array( 'jquery' ));
-
-wp_register_script( 'jquery.validate', plugins_url().'/responsive-contact-form/js/jquery.validate.js',array('jquery'));
-
-wp_enqueue_script( 'jquery.validate' );
-
-wp_enqueue_style('wp-contact',  plugins_url('/responsive-contact-form/css/contact.css'));
-
-wp_head();
-
+	wp_register_script( 'jquery.validate', plugins_url().'/responsive-contact-form/js/jquery.validate.js', array('jquery'));
+	wp_enqueue_script( 'jquery.validate' );
+	wp_enqueue_script( 'my-ajax-request', plugins_url('/responsive-contact-form/js/ajax.js'), array( 'jquery' ));
+	wp_enqueue_style('wp-contact',  plugins_url('/responsive-contact-form/css/contact.css'));
+	wp_head();
 ?>
 <script type="text/javascript">
-
 	var MyAjax = "<?php echo home_url(); ?>/wp-admin/admin-ajax.php";
-
 	function refreshCaptcha(){
-
 		var img = document.images['captchaimg'];		
-
 		img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
-
 	}
-
+	
 	function replaceName() 
-
 	{
-
 	   var pattern = /\bscript\b/ig;
-
 	   var mystring = document.getElementById('ai_name').value;
-
 	   var newString = mystring.replace(pattern, " script ");
-
 	   document.getElementById('ai_name').value = newString;
-
 	}
 
 	function replaceWeburl() 
-
 	{
-
 	   var pattern = /\bscript\b/ig;
-
 	   var mystring = document.getElementById('ai_website').value;
-
 	   var newString = mystring.replace(pattern, " script ");
-
 	   document.getElementById('ai_website').value = newString;
-
 	}
 
 	function replaceSubject() 
-
 	{
-
 	   var pattern = /\bscript\b/ig;
-
 	   var mystring = document.getElementById('ai_subject').value;
-
 	   var newString = mystring.replace(pattern, " script ");
-
 	   document.getElementById('ai_subject').value = newString;
-
 	}
 
 	function replaceComment() 
-
 	{
-
 	   var pattern = /\bscript\b/ig;
-
 	   var mystring = document.getElementById('ai_comment').value;
-
 	   var newString = mystring.replace(pattern, " script ");
-
 	   document.getElementById('ai_comment').value = newString;
-
 	}
-
 </script>
 <?php
 $ai_custom_css = get_option('ai_custom_css');
