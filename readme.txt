@@ -102,6 +102,9 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 = 2.1 =
 * Add Hungarian language translation with new release.
 
+= 2.2 =
+* Add French language translation with new release.
+
 == Upgrade Notice ==
 * Upgrade Notice Notification
 * Fixed issue of deleting record and on uninstallallation deletion of all fields data and table.

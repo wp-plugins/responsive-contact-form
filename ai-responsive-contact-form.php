@@ -4,16 +4,14 @@
 Plugin Name: Responsive Contact Form
 Plugin URI: http://www.augustinfotech.com
 Description: Add Contact Form to your WordPress website.You can add [ai_contact_form] shortcode where you want to display contact form.OR You can add  do_shortcode("[ai_contact_form]"); shortcode in any template.
-Version: 2.1
+Version: 2.2
 Text Domain: aicontactform
 Author: August Infotech
 Author URI: http://www.augustinfotech.com
 */
 
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
 define('AI_PDIR_PATH', plugin_dir_path(__FILE__ ));
-
 add_action('plugins_loaded', 'ai_contact_init');
 
 /** Start Upgrade Notice **/
@@ -37,7 +35,6 @@ function update_notification_message( $plugin_data, $r )
 }
 /** End Upgrade Notice **/
 
-
 /* Activate Hook Plugin */
 register_activation_hook(__FILE__,'ai_add_contact_table');
 
@@ -45,8 +42,6 @@ register_activation_hook(__FILE__,'ai_add_contact_table');
 function ai_contact_init(){
 	load_plugin_textdomain( 'aicontactform', false, plugin_basename( dirname( __FILE__ )  . '/languages/' ));
 }
-
-
 
 add_action('admin_init', 'ai_register_fields' );
 function ai_register_fields(){
@@ -77,7 +72,6 @@ function ai_register_fields(){
 /*Uninstall Hook Plugin */
 
 if( function_exists('register_uninstall_hook') ){
-
 	register_uninstall_hook(__FILE__,'ai_contact_form_uninstall');			
 }
 
@@ -120,7 +114,6 @@ add_action('admin_menu','ai_contact_setting');
 /*
 * Setup Admin menu item
 */
-
 function ai_contact_setting(){
 	add_menu_page(__('AI Contact Form','aicontactform'),__('AI Contact Form','aicontactform'),'manage_options','ai_contact','ai_contact_settings','');
 	$ai_enable_user = get_option('ai_rm_user_list');	
@@ -146,12 +139,12 @@ function ai_add_contact_table(){
 	$wpdb->query("DROP TABLE IF EXISTS ".$ai_table_contact);
 
 	$ai_sql_contact = "CREATE TABLE IF NOT EXISTS $ai_table_contact (
-	user_id int(10) NOT NULL AUTO_INCREMENT,
-	username varchar(50) NULL,
-	email_id varchar(255) NULL,	
-	message varchar(1000) NULL,
-	contact_date date NULL,					  					  
-	PRIMARY KEY (`user_id`)
+		user_id int(10) NOT NULL AUTO_INCREMENT,
+		username varchar(50) NULL,
+		email_id varchar(255) NULL,	
+		message varchar(1000) NULL,
+		contact_date date NULL,					  					  
+		PRIMARY KEY (`user_id`)
 	) ";
 
 	dbDelta($ai_sql_contact);
@@ -160,12 +153,10 @@ function ai_add_contact_table(){
 
 function ai_contact_settings(){
 	include AI_PDIR_PATH."/include/ai_settings.php";
-
 }
 
 function ai_user_list(){
 	include AI_PDIR_PATH."/include/ai_user_list.php";
-
 }
 
 function ai_scripts(){
@@ -175,18 +166,14 @@ function ai_scripts(){
 	wp_enqueue_style('wp-datatable',  plugins_url('/responsive-contact-form/css/data_table.css'));
 	wp_enqueue_style('jquery-ui');
 }  
-
 add_action( 'admin_enqueue_scripts', 'ai_scripts' );
 
 if(!is_admin()){
 	wp_localize_script( 'my-ajax-request', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );	
 }
 
-
-
 add_action('wp_ajax_ai_action', 'ai_action_call');
 add_action('wp_ajax_nopriv_ai_action', 'ai_action_call');
-
 function ai_action_call(){	
 	global $wpdb;
 	$data = $_POST['fdata'];
@@ -227,17 +214,12 @@ function ai_action_call(){
 		$ai_emailadmin = get_option('ai_email_address_setting');
 
 	}
-
-            
-
+        
 	if(get_option('ai_subject_text')==''){
 		$ai_subtext = __('August Infotech','aicontactform');
-
 	} else {
 		$ai_subtext = get_option('ai_subject_text');
 	}
-
-	
 
 	if(get_option('ai_reply_user_message')==''){
 		$ai_reply_msg = __('Thank you for contacting us...We will get back to you soon...','aicontactform');
@@ -301,60 +283,40 @@ function ai_action_call(){
 	$ai_usercopy_subject = __('Copy of form submitted','aicontactform');
 
 	if($arr == 1) {		
-
 		wp_mail($ai_email, $ai_subject_mail, $ai_reply_msg, $ai_headers);
 		if($sendcopy == 1){
 			wp_mail($ai_email, $ai_usercopy_subject, $ai_admin_usermsg, $ai_admin_headers);
 		}
 
 		wp_mail($ai_emailadmin, $ai_admin_subject, $ai_admin_usermsg, $ai_admin_headers);
-
 		$date = date("Y-m-d");
-
 		$table_name = $wpdb->prefix."ai_contact";
-
 		$date = current_time( 'mysql' );
 		
-		// Not Inserted User data into database if user list checkbox is checked.
-		
-		$ai_insert_user = get_option('ai_rm_user_list');	
-		
-		if($ai_insert_user != 'on'){
-
-		if($ai_name != 'User' && $ai_name != ''){
-
-			$wpdb->insert( $table_name, array("username" => urlencode($ai_name), "email_id" => $ai_email, "message" => $ai_comment, "contact_date" => $date ));
-
-		}else{
-
-			$wpdb->insert( $table_name, array("email_id" => $ai_email, "message" => $ai_comment, "contact_date" => $date ));
-
+		// Not Inserted User data into database if user list checkbox is checked.		
+		$ai_insert_user = get_option('ai_rm_user_list');			
+		if($ai_insert_user != 'on') {
+			if($ai_name != 'User' && $ai_name != '') {
+				$wpdb->insert( $table_name, array("username" => urlencode($ai_name), "email_id" => $ai_email, "message" => $ai_comment, "contact_date" => $date ));
+			} else {
+				$wpdb->insert( $table_name, array("email_id" => $ai_email, "message" => $ai_comment, "contact_date" => $date ));
 			}
-		}	
-		
+		}		
 		//Added contact request data into mailchimp database if mailchimp extension is active
 		
 		//Check whether mailchimpl extension for Contact plugin is active or not
-		if ( is_plugin_active('responsive-contact-form-mailchimp-extension/ai-responsive-contact-form-mailchimp-extension.php' ) )
-		{
-			
-				$apikey = esc_attr(get_option('ai_me_contactform_api_key'));
-
-				$active_mail_chimp =  get_option('aimclists') ;
-				
-				require_once( WP_PLUGIN_DIR . '/responsive-contact-form-mailchimp-extension/admin/includes/AIMCAPI.class.php');
-				
-				$storedata = new AIMCAPI($apikey);
-				
-				if($active_mail_chimp)
-				{
-					foreach($active_mail_chimp as $list_id => $list_val) {
-					
-						$storedata->listSubscribe($list_id,$ai_email);
-					}
-				}	
-		}	
-
+		if ( is_plugin_active('responsive-contact-form-mailchimp-extension/ai-responsive-contact-form-mailchimp-extension.php' ) ) {	
+			$apikey = esc_attr(get_option('ai_me_contactform_api_key'));
+			$active_mail_chimp =  get_option('aimclists') ;		
+			require_once( WP_PLUGIN_DIR . '/responsive-contact-form-mailchimp-extension/admin/includes/AIMCAPI.class.php');		
+			$storedata = new AIMCAPI($apikey);
+		
+			if($active_mail_chimp) {
+				foreach($active_mail_chimp as $list_id => $list_val) {			
+					$storedata->listSubscribe($list_id,$ai_email);
+				}
+			}	
+		}
 	}
 	echo json_encode($arr);	
 	die(); 	
