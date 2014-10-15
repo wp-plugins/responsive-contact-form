@@ -17,7 +17,7 @@ Multilingual Responsive Contact Form is a simple WordPress plugin that generates
 
 Contact Us Form is a simple WordPress plugin that generates a responsive contact form on your website or blog.simply insert [ai_contact_form] in any page or post content and the form will appear or paste this php code `<?php echo do_shortcode( '[ai_contact_form]' ); ?>` in any template.
 
-This plugin supports nglish(default), Chinese, Dutch, French, German, Hungarian, Italian, Russian, Spanish and Turkish languages, both in the back-end and  front-end of the site.
+This plugin supports English(default), Chinese, Dutch, French, German, Hungarian, Italian, Russian, Spanish and Turkish languages, both in the back-end and  front-end of the site.
 
 Features:
 
@@ -29,8 +29,7 @@ Features:
 * Easy to add subject text for mail to be sent to the users.
 * You can choose where to send the messages - this can be any email address.
 * You can choose the message to be displayed after successful submission of form Ex.-Your details are submitted successfully!.
-* Easy to call using two method one is using shortcode [ai_contact_form] and other using paste this php code 
-  <?php do_shortcode("[ai_contact_form]"); ?> or < ? php echo do_shortcode("[ai_contact_form]"); ? >
+* Easy to call using two method one is using shortcode [ai_contact_form] and other using paste this php code `<?php echo do_shortcode( '[ai_contact_form]' ); ?>`
 * New easily manage fields to be displayed on form.
 * New export list of all user who contact site.
 * New send me a copy checkbox is added to form.
@@ -55,7 +54,7 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 
 1. Upload the `responsive-contact-form` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin using the 'Plugins' menu in your WordPress admin panel.
-3. You can adjust the necessary settings using your WordPress admin panel in "Settings" > "AI Simple Ajax Contact Form Settings".
+3. You can adjust the necessary settings using your WordPress admin panel in "Settings" "Responsive Contact Form Settings".
 4. Create a page or a post and insert the shortcode [ai_contact_form].
 5. You can add `<?php echo do_shortcode( '[ai_contact_form]' ); ?>` shortcode in any template.
 
