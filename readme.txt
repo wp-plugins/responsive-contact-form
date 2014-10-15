@@ -3,7 +3,7 @@ Contributors: augustinfotech
 Tags: Responsive Contact Form,Contact Form, text, contact, form, contacts, contact form, request, contact me, feedback form, feedback, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 2.2
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ Multilingual Responsive Contact Form is a simple WordPress plugin that generates
 
 Contact Us Form is a simple WordPress plugin that generates a responsive contact form on your website or blog.simply insert [ai_contact_form] in any page or post content and the form will appear or paste this php code <?php do_shortcode("[ai_contact_form]"); ?> or <?php echo do_shortcode("[ai_contact_form]"); ?>in any template.
 
-This plugin supports English(default), German, Spanish, Italian, Dutch, Russian, Turkish and Chinese languages, both in the back-end and  front-end of the site.
+This plugin supports nglish(default), Chinese, Dutch, French, German, Hungarian, Italian, Russian, Spanish and Turkish languages, both in the back-end and  front-end of the site.
 
 Features:
 
@@ -35,8 +35,18 @@ Features:
 * New export list of all user who contact site.
 * New send me a copy checkbox is added to form.
 * New added message from user in database and displayed in admin.  
-* New Language translations for English(default), German, Spanish, Italian, Dutch, Russian, Turkish and Chinese have been updated in the back-end and front-end of the   site. Also you can add other languages based on your requirement.  
+* New Language translations for English(default), Chinese, Dutch, French, German, Hungarian, Italian, Russian, Spanish and Turkish have been updated in the back-end and front-end of the   site. Also you can add other languages based on your requirement.  
 * Manage form style/CSS from admin pannel.
+
+Special thanks to:
+
+- Tomas Broersma for providing Dutch translation.
+- Snackddp for providing French translation.
+- Martin Stehle for providing German translation.
+- László Ángyán for providing Hungarian translation.
+- Iole Calzavara for providing Italian translation.
+- Ksenia for providing Russian translation.
+- Tomás Puig for providing Spanish translation.
 
 Click here to view more about this plugin. [Visit blog post](http://softstribe.com/wordpress/how-to-add-responsive-contact-form-in-wordpress) 
 Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
@@ -100,10 +110,8 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 * Resolved wp-load.php error on admin dashboard.
 
 = 2.1 =
-* Add Hungarian language translation with new release.
+* Add Hungarian language translation.
 
-= 2.2 =
-* Add French language translation with new release.
 
 == Upgrade Notice ==
 * Upgrade Notice Notification
