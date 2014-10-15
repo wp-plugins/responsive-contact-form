@@ -42,7 +42,7 @@ Special thanks to:
 - Tomas Broersma for providing Dutch translation.
 - Snackddp for providing French translation.
 - Martin Stehle for providing German translation.
-- L√°szlÛ √ngy√°n for providing Hungarian translation.
+- L√°szlÛ &Atilde;ngy√°n for providing Hungarian translation.
 - Iole Calzavara for providing Italian translation.
 - Ksenia for providing Russian translation.
 - Tom√°s Puig for providing Spanish translation.
