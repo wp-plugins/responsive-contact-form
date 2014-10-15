@@ -3,7 +3,7 @@ Contributors: augustinfotech
 Tags: Responsive Contact Form,Contact Form, text, contact, form, contacts, contact form, request, contact me, feedback form, feedback, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,7 @@ Multilingual Responsive Contact Form is a simple WordPress plugin that generates
 
 > Like our plugin page on facebook to receive notifications and updates. You can also post queries and request for support. [Like Plugin Page On Facebook](http://www.facebook.com/responsive.contact.form?ref=hl)
 
-Contact Us Form is a simple WordPress plugin that generates a responsive contact form on your website or blog.simply insert [ai_contact_form] in any page or post content and the form will appear or paste this php code <?php do_shortcode("[ai_contact_form]"); ?> or <?php echo do_shortcode("[ai_contact_form]"); ?>in any template.
+Contact Us Form is a simple WordPress plugin that generates a responsive contact form on your website or blog.simply insert [ai_contact_form] in any page or post content and the form will appear or paste this php code `<?php echo do_shortcode( '[ai_contact_form]' ); ?>` in any template.
 
 This plugin supports nglish(default), Chinese, Dutch, French, German, Hungarian, Italian, Russian, Spanish and Turkish languages, both in the back-end and  front-end of the site.
 
@@ -57,7 +57,7 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 2. Activate the plugin using the 'Plugins' menu in your WordPress admin panel.
 3. You can adjust the necessary settings using your WordPress admin panel in "Settings" > "AI Simple Ajax Contact Form Settings".
 4. Create a page or a post and insert the shortcode [ai_contact_form].
-5. You can add <?php do_shortcode("[ai_contact_form]"); ?> or <?php echo do_shortcode("[ai_contact_form]"); ?> shortcode in any template.
+5. You can add `<?php echo do_shortcode( '[ai_contact_form]' ); ?>` shortcode in any template.
 
 Click here to view more about this plugin. [Visit blog post](http://softstribe.com/wordpress/how-to-add-responsive-contact-form-in-wordpress) 
 Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
@@ -72,7 +72,7 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 1. Contact Form display.
 2. AI Simple Ajax Contact Form Settings in WordPress admin panel.
 3. Create a page or a post and insert the shortcode [ai_contact_form] into the text.
-4. You can add <?php do_shortcode("[ai_contact_form]"); ?> or <?php echo do_shortcode("[ai_contact_form]"); ?> shortcode in any template.
+4. You can add `<?php echo do_shortcode( '[ai_contact_form]' ); ?>` shortcode in any template.
 
 
 == Changelog ==
@@ -92,7 +92,7 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 * Added message from user in database and displayed in admin.
 
 = 1.5 =
-* Added Language translations for English(default),German,Italian,Chinese,Turkish,Spanish have been updated in the back-end and front-end of the site. 
+* Added Language translations for Englis(default), German, Italian, Chinese, Turkish, Spanish have been updated in the back-end and front-end of the site. 
 
 = 1.6 =
 * Added form custom style/CSS feature into admin panel.
@@ -110,13 +110,15 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 * Resolved wp-load.php error on admin dashboard.
 
 = 2.1 =
-* Add Hungarian language translation.
+* Add Hungarian language translation with new release.
 
+= 2.2 =
+* Add French language translation with new release.
 
 == Upgrade Notice ==
 * Upgrade Notice Notification
 * Fixed issue of deleting record and on uninstallallation deletion of all fields data and table.
 * Fixed the issue of textarea focus in the middle.
 * Added message from user in database and displayed in admin. 
-* Compatible in wordpress 3.9.1
+* Compatible in wordpress 4.0
 * Backup languages folder.
