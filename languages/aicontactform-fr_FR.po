@@ -38,17 +38,17 @@ msgstr "August Infotech"
 #: ai-responsive-contact-form.php:243
 #@ aicontactform
 msgid "Thank you for contacting us...We will get back to you soon..."
-msgstr "Merci de nous avoir contacté... Nous vous contacterons d'ici peu..."
+msgstr "Merci de nous avoir contactÃ©... Nous vous contacterons d'ici peu..."
 
 #: ai-responsive-contact-form.php:258
 #@ aicontactform
 msgid "Reply : "
-msgstr "Répondre :"
+msgstr "RÃ©pondre :"
 
 #: ai-responsive-contact-form.php:266
 #@ aicontactform
 msgid "User Details"
-msgstr "Détails des utilisateurs"
+msgstr "DÃ©tails des utilisateurs"
 
 #: ai-responsive-contact-form.php:269
 #@ aicontactform
@@ -63,7 +63,7 @@ msgstr "Mail :"
 #: ai-responsive-contact-form.php:275
 #@ aicontactform
 msgid "Phone :"
-msgstr "Téléphone :"
+msgstr "TÃ©lÃ©phone :"
 
 #: ai-responsive-contact-form.php:279
 #@ aicontactform
@@ -83,18 +83,18 @@ msgstr "Commentaire :"
 #: ai-responsive-contact-form.php:293
 #@ aicontactform
 msgid " has contacted us"
-msgstr "nous a contacté"
+msgstr "nous a contactÃ©"
 
 #: ai-responsive-contact-form.php:301
 #@ aicontactform
 msgid "Copy of form submitted"
-msgstr "Copie du formulaire envoyé"
+msgstr "Copie du formulaire envoyÃ©"
 
 #: include/ai-contact-form-template.php:64
 #: include/ai-contact-form-template.php:171
 #@ aicontactform
 msgid "<strong>Succeed :</strong>Your details are submitted successfully!"
-msgstr "<strong> Succès :</ strong> Vos coordonnées ont été envoyé avec succès."
+msgstr "<strong> SuccÃ¨s :</ strong> Vos coordonnÃ©es ont Ã©tÃ© envoyÃ© avec succÃ¨s."
 
 #: include/ai-contact-form-template.php:70
 #: include/ai-contact-form-template.php:76
@@ -112,7 +112,7 @@ msgstr "Mail"
 #: include/ai-contact-form-template.php:94
 #@ aicontactform
 msgid "Phone"
-msgstr "Téléphone"
+msgstr "TÃ©lÃ©phone"
 
 #: include/ai-contact-form-template.php:103
 #: include/ai-contact-form-template.php:106
@@ -141,7 +141,7 @@ msgstr "Captcha"
 #: include/ai-contact-form-template.php:142
 #@ aicontactform
 msgid "Refresh Captcha Code"
-msgstr "Rafraîchir le code Captcha"
+msgstr "RafraÃ®chir le code Captcha"
 
 #: include/ai-contact-form-template.php:145
 #@ aicontactform
@@ -151,7 +151,7 @@ msgstr "Code Captcha"
 #: include/ai-contact-form-template.php:147
 #@ aicontactform
 msgid "Captcha is not case sensitive."
-msgstr "Captcha n'est pas sensible à la casse."
+msgstr "Captcha n'est pas sensible Ã  la casse."
 
 #: include/ai-contact-form-template.php:148
 #@ aicontactform
@@ -161,7 +161,7 @@ msgstr "<strong>Alerte :</strong> Code Captcha invalide !"
 #: include/ai-contact-form-template.php:157
 #@ aicontactform
 msgid "Send me a copy"
-msgstr "Envoyé moi une copie"
+msgstr "EnvoyÃ© moi une copie"
 
 #: include/ai-contact-form-template.php:163
 #@ aicontactform
@@ -176,12 +176,12 @@ msgstr "Envoyer"
 #: include/ai_settings.php:13
 #@ aicontactform
 msgid "Responsive Contact Form Settings"
-msgstr "Paramètres de Contact Form Responsive"
+msgstr "ParamÃ¨tres de Contact Form Responsive"
 
 #: include/ai_settings.php:16
 #@ aicontactform
 msgid "Form Settings"
-msgstr "Paramètres du formulaire"
+msgstr "ParamÃ¨tres du formulaire"
 
 #: include/ai_settings.php:20
 #@ aicontactform
@@ -191,7 +191,7 @@ msgstr "<strong>Nom du champ</strong>"
 #: include/ai_settings.php:21
 #@ aicontactform
 msgid "<strong>Select to Show / Hide Fields on form</strong>"
-msgstr "<strong>Sélectionnez pour afficher / masquer les champs du formulaire</strong>"
+msgstr "<strong>SÃ©lectionnez pour afficher / masquer les champs du formulaire</strong>"
 
 #: include/ai_settings.php:22
 #@ aicontactform
@@ -206,7 +206,7 @@ msgstr "Nom :"
 #: include/ai_settings.php:30
 #@ aicontactform
 msgid "Phone:"
-msgstr "Téléphone :"
+msgstr "TÃ©lÃ©phone :"
 
 #: include/ai_settings.php:35
 #@ aicontactform
@@ -231,7 +231,7 @@ msgstr "Captcha :"
 #: include/ai_settings.php:52
 #@ aicontactform
 msgid "<strong>Note: </strong>Enable captcha sets by default it to required field."
-msgstr "<strong>Note:</strong> Activer le Captcha par défaut."
+msgstr "<strong>Note:</strong> Activer le Captcha par dÃ©faut."
 
 #: include/ai_settings.php:55
 #@ aicontactform
@@ -246,7 +246,7 @@ msgstr "<strong>Note:</strong> Le champ mail est obligatoire."
 #: include/ai_settings.php:60
 #@ aicontactform
 msgid "Send me a copy:"
-msgstr "Envoyé moi une copie :"
+msgstr "EnvoyÃ© moi une copie :"
 
 #: include/ai_settings.php:62
 #@ aicontactform
@@ -261,22 +261,22 @@ msgstr "Supprimer la liste des utilisateurs :"
 #: include/ai_settings.php:67
 #@ aicontactform
 msgid "<strong>Note: </strong>Select checkbox to remove user list which connected to your website."
-msgstr "<strong>Note:</strong> Cochez la case pour supprimer la liste des utilisateurs connectée à votre site internet."
+msgstr "<strong>Note:</strong> Cochez la case pour supprimer la liste des utilisateurs connectÃ©e Ã  votre site internet."
 
 #: include/ai_settings.php:70
 #@ aicontactform
 msgid "Success Message Display:"
-msgstr "Afficher un message de succès :"
+msgstr "Afficher un message de succÃ¨s :"
 
 #: include/ai_settings.php:72
 #@ aicontactform
 msgid "<strong>Note: </strong>Select checkbox to show the message displayed after successful submission below."
-msgstr "<strong>Note:</strong> Sélectionnez la case pour afficher la réussite de l'envoi du message."
+msgstr "<strong>Note:</strong> SÃ©lectionnez la case pour afficher la rÃ©ussite de l'envoi du message."
 
 #: include/ai_settings.php:79
 #@ aicontactform
 msgid "Mail Settings"
-msgstr "Paramètres du Mail"
+msgstr "ParamÃ¨tres du Mail"
 
 #: include/ai_settings.php:84
 #@ aicontactform
@@ -286,7 +286,7 @@ msgstr "Adresse mail :"
 #: include/ai_settings.php:87
 #@ aicontactform
 msgid "<strong>Note:</strong> You can add multiple email addresses seperated by comma, to send email to multiple users."
-msgstr "<strong> Note: </strong> Vous pouvez ajouter plusieurs adresses électroniques séparées par des virgules, pour envoyer des mails à plusieurs utilisateurs."
+msgstr "<strong> Note: </strong> Vous pouvez ajouter plusieurs adresses Ã©lectroniques sÃ©parÃ©es par des virgules, pour envoyer des mails Ã  plusieurs utilisateurs."
 
 #: include/ai_settings.php:91
 #@ aicontactform
@@ -296,27 +296,27 @@ msgstr "Sujet du texte :"
 #: include/ai_settings.php:94
 #@ aicontactform
 msgid "<strong>Note:</strong> Default subject text \" August Infotech \" will be used."
-msgstr "<strong>Note:</strong> Le sujet \" August Infotech \" sera utilisé par défaut."
+msgstr "<strong>Note:</strong> Le sujet \" August Infotech \" sera utilisÃ© par dÃ©faut."
 
 #: include/ai_settings.php:98
 #@ aicontactform
 msgid "Reply Message for User:"
-msgstr "Message de réponse pour les utilisateurs :"
+msgstr "Message de rÃ©ponse pour les utilisateurs :"
 
 #: include/ai_settings.php:102
 #@ aicontactform
 msgid "<strong>Note:</strong> Default Reply Message \" Thank you for contacting us...We will get back to you soon... \" will be used."
-msgstr "<strong>Note:</strong> Le Message de réponse  \"Merci de nous avoir contacté... Nous vous répondrons d'ici peu...\" sera utilisé par défaut."
+msgstr "<strong>Note:</strong> Le Message de rÃ©ponse  \"Merci de nous avoir contactÃ©... Nous vous rÃ©pondrons d'ici peu...\" sera utilisÃ© par dÃ©faut."
 
 #: include/ai_settings.php:106
 #@ aicontactform
 msgid "Custom Css:"
-msgstr "Css personnalisé :"
+msgstr "Css personnalisÃ© :"
 
 #: include/ai_settings.php:109
 #@ aicontactform
 msgid "<strong>Note:</strong> this CSS overrite to our contact plugin CSS And Also please use <strong>!important</strong> with your CSS property."
-msgstr "<strong>Note:</strong> Ce CSS écrasera le CSS de notre plugin Contact, veuillez aussi utiliser <strong>!important</strong> avec la propriété de votre CSS."
+msgstr "<strong>Note:</strong> Ce CSS Ã©crasera le CSS de notre plugin Contact, veuillez aussi utiliser <strong>!important</strong> avec la propriÃ©tÃ© de votre CSS."
 
 #: include/ai_settings.php:115
 #@ aicontactform
@@ -326,7 +326,7 @@ msgstr "Sauvegarder toutes les modifications"
 #: include/ai_settings.php:118
 #@ aicontactform
 msgid "<strong>Note:</strong> You can add <strong> [ai_contact_form] </strong> shortcode where you want to display contact form in pages."
-msgstr "<strong>Note:</strong> Vous pouvez ajouter ce bout de code <strong> [ai_contact_form] </strong> où vous souhaitez afficher le formulaire de contact dans vos pages."
+msgstr "<strong>Note:</strong> Vous pouvez ajouter ce bout de code <strong> [ai_contact_form] </strong> oÃ¹ vous souhaitez afficher le formulaire de contact dans vos pages."
 
 #: include/ai_settings.php:119
 #@ aicontactform
@@ -341,7 +341,7 @@ msgstr " <br/> OU vous pouvez ajouter ce bout de code <strong> &lt;&#63;php echo
 #: include/ai_user_list.php:10
 #@ aicontactform
 msgid "User Record Deleted."
-msgstr "Fiche utilisateur supprimée."
+msgstr "Fiche utilisateur supprimÃ©e."
 
 #: include/ai_user_list.php:15
 #@ aicontactform
@@ -367,7 +367,7 @@ msgstr "(Format: DD-MM-YYYY)"
 #: include/ai_user_list.php:25
 #@ aicontactform
 msgid "To Date"
-msgstr "Jusqu'à"
+msgstr "Jusqu'Ã "
 
 #: include/ai_user_list.php:28
 #@ aicontactform
@@ -382,7 +382,7 @@ msgstr "Annuler"
 #: include/ai_user_list.php:36
 #@ aicontactform
 msgid "Please click on column's title to sort the data according to specific column !!!"
-msgstr "S'il vous plaît cliquer sur le titre de colonne pour trier les données selon la colonne spécifique !!!"
+msgstr "S'il vous plaÃ®t cliquer sur le titre de colonne pour trier les donnÃ©es selon la colonne spÃ©cifique !!!"
 
 #: include/ai_user_list.php:39
 #@ aicontactform
@@ -421,12 +421,12 @@ msgstr "Action"
 #: include/ai_user_list.php:98
 #@ aicontactform
 msgid "No User Records Found !!! "
-msgstr "Aucune fiche utilisateur trouvé !!!"
+msgstr "Aucune fiche utilisateur trouvÃ© !!!"
 
 #: include/userlist_export.php:15
 #@ aicontactform
 msgid "List Of Users Contacted Site"
-msgstr "Liste des utilisateurs du site contacté"
+msgstr "Liste des utilisateurs du site contactÃ©"
 
 #: include/userlist_export.php:18
 #@ aicontactform

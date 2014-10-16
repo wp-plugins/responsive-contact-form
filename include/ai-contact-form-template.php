@@ -91,7 +91,7 @@ $data = '
 	<label class="control-label" for="ai_phone">'.__('Phone','aicontactform');
 	if(esc_attr(get_option('ai_enable_require_phone'))=="on"){ $data .= '<span class="req">*</span>'; } $data .= '</label>
 	    <div class="controls">
-		    <input id="ai_phone" maxlength="15" name="ai_phone" title="'.__('Phone','aicontactform').'" type="text" class="input-xlarge number '; 
+		    <input id="ai_phone" maxlength="15" name="ai_phone" title="'.__('Phone','aicontactform').'" type="text" class="input-xlarge phone '; 
 			if(esc_attr(get_option('ai_enable_require_phone'))=="on") {$data .= 'required';} $data .= '">
 	    </div>
     </div>';
