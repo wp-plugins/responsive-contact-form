@@ -4,7 +4,7 @@
 Plugin Name: Responsive Contact Form
 Plugin URI: http://www.augustinfotech.com
 Description: Add Contact Form to your WordPress website.You can add [ai_contact_form] shortcode where you want to display contact form.OR You can add  do_shortcode("[ai_contact_form]"); shortcode in any template.
-Version: 2.3
+Version: 2.4
 Text Domain: aicontactform
 Author: August Infotech
 Author URI: http://www.augustinfotech.com
@@ -123,8 +123,8 @@ function ai_contact_setting(){
 	}   
 }
 
-add_action('admin_enqueue_scripts', 'load_admin_scripts');
-function load_admin_scripts($hook) {
+add_action('admin_enqueue_scripts', 'ai_load_admin_scripts');
+function ai_load_admin_scripts($hook) {
 	global $page_options;
 	if( $hook != $page_options )
 		return;
@@ -237,9 +237,9 @@ function ai_action_call(){
 	}
 
 	// settings for mail received by user
-	$ai_subject_mail = __('Reply : ','aicontactform').$ai_subtext;			
+	$ai_subject_mail = __('Reply : ','aicontactform').$ai_subtext;	
 	$ai_headers = "MIME-Version: 1.0\n";
-	$ai_headers .= "Content-type: text/html; charset=iso-8859-1\n";
+	$ai_headers .= "Content-type: text/html; charset=UTF-8\n";
 	$ai_headers .= "From:".get_bloginfo('name')." <".$ai_emailadmin.">\n";
 	$ai_headers .= "Message-Id: <".time()."@".$_SERVER['SERVER_NAME'].">\n";
 	$ai_headers .= "X-Mailer: php-mail-function-0.2\n";
@@ -272,10 +272,9 @@ function ai_action_call(){
 	if($ai_name == '') {	
 		$ai_name = 'User';
 	}
-	$ai_admin_subject = $ai_name.__(' has contacted us','aicontactform');		
-
+	$ai_admin_subject = $ai_name.__(' has contacted us','aicontactform');
 	$ai_admin_headers = "MIME-Version: 1.0\n";
-	$ai_admin_headers .= "Content-type: text/html; charset=iso-8859-1\n";	
+	$ai_admin_headers .= "Content-type: text/html; charset=UTF-8\n";	
 	$ai_admin_headers .= "From: ".$ai_name." <".$ai_email.">\n";
 	$ai_admin_headers .= "Message-Id: <".time()."@".$_SERVER['SERVER_NAME'].">\n";
 	$ai_admin_headers .= "X-Mailer: php-mail-function-0.2\n";
@@ -284,7 +283,7 @@ function ai_action_call(){
 
 	if($arr == 1) {		
 		wp_mail($ai_email, $ai_subject_mail, $ai_reply_msg, $ai_headers);
-		if($sendcopy == 1){
+		if($sendcopy == 1) {
 			wp_mail($ai_email, $ai_usercopy_subject, $ai_admin_usermsg, $ai_admin_headers);
 		}
 
