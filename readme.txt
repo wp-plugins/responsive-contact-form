@@ -3,7 +3,7 @@ Contributors: augustinfotech
 Tags: Responsive Contact Form,Contact Form, text, contact, form, contacts, contact form, request, contact me, feedback form, feedback, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 2.4
+Stable tag: 2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,9 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 
 = 2.4 =
 * Update spanish language, resolve function conflict issue and french accent issue.
+
+= 2.5 =
+* Resolve export user bug.
 
 == Upgrade Notice ==
 * Upgrade Notice Notification

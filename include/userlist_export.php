@@ -4,11 +4,12 @@ $table_name = $wpdb->prefix . "ai_contact";
 $act=$_REQUEST["act"];	
 	$startdate=$_POST['start_date'];
 	$enddate=$_POST['end_date'];	
-	$stdateold=split("/",$startdate);
+	$stdateold=explode("/",$startdate);
 	$stdatenew=$stdateold[2]."-".$stdateold[0]."-".$stdateold[1];
-	$endateold=split("/",$enddate);
+	$endateold=explode("/",$enddate);
 	$endatenew=$endateold[2]."-".$endateold[0]."-".$endateold[1];
 	$export_result = $wpdb->get_results("select * from $table_name where contact_date >= '$stdatenew' and contact_date <= '$endatenew' order by user_id ASC");
+
 	$rs =' 
 		<table border="1" cellspacing="1" cellpadding="0">
 			<tr>
