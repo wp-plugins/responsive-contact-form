@@ -4,7 +4,7 @@
 Plugin Name: Responsive Contact Form
 Plugin URI: http://www.augustinfotech.com
 Description: Add Contact Form to your WordPress website.You can add [ai_contact_form] shortcode where you want to display contact form.OR You can add  do_shortcode("[ai_contact_form]"); shortcode in any template.
-Version: 2.5
+Version: 2.6
 Text Domain: aicontactform
 Author: August Infotech
 Author URI: http://www.augustinfotech.com
@@ -115,13 +115,25 @@ add_action('admin_menu','ai_contact_setting');
 * Setup Admin menu item
 */
 function ai_contact_setting(){
-	add_menu_page(__('AI Contact Form','aicontactform'),__('AI Contact Form','aicontactform'),'manage_options','ai_contact','ai_contact_settings','');
+	add_menu_page(__('AI Contact Form','aicontactform'),__('AI Contact Form','aicontactform'),'manage_options','ai_contact','ai_contact_settings','','79.5');
 	$ai_enable_user = get_option('ai_rm_user_list');	
 	if($ai_enable_user != 'on'){
 	   global $page_options;
 	   $page_options = add_submenu_page('ai_contact', __('User List','aicontactform'), __('User List','aicontactform'),'manage_options', 'ai_user_lists', 'ai_user_list');
 	}   
 }
+
+/*
+* Admin menu icons
+*/
+add_action( 'admin_head', 'ai_cf_add_menu_icons_styles' );
+function ai_cf_add_menu_icons_styles() { ?>
+	<style type="text/css" media="screen">
+		#adminmenu .toplevel_page_ai_contact div.wp-menu-image:before {
+			content: '\f314';
+		}
+	</style>
+<?php }
 
 add_action('admin_enqueue_scripts', 'ai_load_admin_scripts');
 function ai_load_admin_scripts($hook) {
@@ -309,10 +321,17 @@ function ai_action_call(){
 			$active_mail_chimp =  get_option('aimclists') ;		
 			require_once( WP_PLUGIN_DIR . '/responsive-contact-form-mailchimp-extension/admin/includes/AIMCAPI.class.php');		
 			$storedata = new AIMCAPI($apikey);
-		
+			if($ai_name != 'User' && $ai_name != '') {
+				$ai_merge_vars = array('FNAME'=>$ai_name);
+			} else {
+				$ai_merge_vars = array();
+			}
 			if($active_mail_chimp) {
 				foreach($active_mail_chimp as $list_id => $list_val) {			
-					$storedata->listSubscribe($list_id,$ai_email);
+					$storedata->listSubscribe($list_id, $ai_email, $ai_merge_vars);
+				}
+				if ($storedata->errorCode) {
+					echo $storedata->errorMessage;
 				}
 			}	
 		}
