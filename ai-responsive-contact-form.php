@@ -4,7 +4,7 @@
 Plugin Name: Responsive Contact Form
 Plugin URI: http://www.augustinfotech.com
 Description: Add Contact Form to your WordPress website.You can add [ai_contact_form] shortcode where you want to display contact form.OR You can add  do_shortcode("[ai_contact_form]"); shortcode in any template.
-Version: 2.6
+Version: 2.7
 Text Domain: aicontactform
 Author: August Infotech
 Author URI: http://www.augustinfotech.com

@@ -2,8 +2,8 @@
 Contributors: augustinfotech
 Tags: Responsive Contact Form,Contact Form, text, contact, form, contacts, contact form, request, contact me, feedback form, feedback, contact button, contact form plugin, contacts form plugin, attachment, send, copy, attachment, send copy
 Requires at least: 3.6
-Tested up to: 4.0
-Stable tag: 2.6
+Tested up to: 4.1
+Stable tag: 2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,7 @@ Special thanks to:
 - Iole Calzavara for providing Italian translation.
 - Ksenia for providing Russian translation.
 - Tom&aacute;s Puig for providing Spanish translation.
+- Peter for providing Slovak translation
 
 Click here to view more about this plugin. [Visit blog post](http://softstribe.com/wordpress/how-to-add-responsive-contact-form-in-wordpress) 
 Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
@@ -125,6 +126,9 @@ Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
 
 = 2.6 =
 * Fetch Name in mailchimp extension plugin.
+
+= 2.7 =
+* Add Slovak language translation with new release.
 
 == Upgrade Notice ==
 * Upgrade Notice Notification
