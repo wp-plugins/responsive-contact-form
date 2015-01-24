@@ -45,8 +45,8 @@ Special thanks to:
 - L&aacute;szl&oacute; &Aacute;ngy&aacute;n for providing Hungarian translation.
 - Iole Calzavara for providing Italian translation.
 - Ksenia for providing Russian translation.
+- Peter and Marian for providing Slovak translation.
 - Tom&aacute;s Puig for providing Spanish translation.
-- Peter for providing Slovak translation
 
 Click here to view more about this plugin. [Visit blog post](http://softstribe.com/wordpress/how-to-add-responsive-contact-form-in-wordpress) 
 Plugin Develop by August Infotech [Visit website](http://www.augustinfotech.com)
