@@ -2,13 +2,18 @@
 	global $wpdb;
 	$table_name = $wpdb->prefix . "ai_contact";
 	$info=$_GET["info"];
-	if($info=="del")
-	{
-		$delid=$_GET["did"];
-		
-		$wpdb->query("delete from ".$table_name." where `user_id`=".$delid);
-		echo "<div style='clear:both;'></div><div class='updated' id='message'><p><strong>:".__('User Record Deleted.','aicontactform')."</strong>.</p></div>";
+	if(!empty($info)){
+		if($info=="del")
+		{
+			$delid = sanitize_title_for_query($_GET["did"]);
+			if(!empty($delid)){
+				$wpdb->query( $wpdb->prepare( "delete from ".$table_name." where `user_id`= %s", $delid) );
+				echo "<div style='clear:both;'></div><div class='updated' id='message'><p><strong>:".__('User Record Deleted.','aicontactform')."</strong>.</p></div>";
+			}
+			
+		}
 	}
+	
 ?>
 <div class="wrap"> 
 	<img src="<?php echo plugins_url();?>/responsive-contact-form/images/augustinfotech.jpg" class="icon32" />

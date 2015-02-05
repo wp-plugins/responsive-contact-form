@@ -1,4 +1,6 @@
 <?php
+$parse_uri = explode( 'wp-content', $_SERVER['SCRIPT_FILENAME'] );
+require_once( $parse_uri[0] . 'wp-load.php' );
 global $wpdb;
 $table_name = $wpdb->prefix . "ai_contact";
 $act=$_REQUEST["act"];	
@@ -8,8 +10,7 @@ $act=$_REQUEST["act"];
 	$stdatenew=$stdateold[2]."-".$stdateold[0]."-".$stdateold[1];
 	$endateold=explode("/",$enddate);
 	$endatenew=$endateold[2]."-".$endateold[0]."-".$endateold[1];
-	$export_result = $wpdb->get_results("select * from $table_name where contact_date >= '$stdatenew' and contact_date <= '$endatenew' order by user_id ASC");
-
+	$export_result = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE contact_date >= %s and contact_date <= %s order by user_id ASC", $stdatenew, $endatenew ) );
 	$rs =' 
 		<table border="1" cellspacing="1" cellpadding="0">
 			<tr>

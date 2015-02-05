@@ -3,9 +3,13 @@ function contactFormShortcode(){
 	wp_register_script( 'jquery.validate', plugins_url().'/responsive-contact-form/js/jquery.validate.js', array('jquery'));
 	wp_enqueue_script( 'jquery.validate' );
 	wp_enqueue_script( 'my-ajax-request', plugins_url('/responsive-contact-form/js/ajax.js'), array( 'jquery' ));
-	wp_enqueue_style('wp-contact',  plugins_url('/responsive-contact-form/css/contact.css'));
+	wp_enqueue_style( 'wp-contact',  plugins_url('/responsive-contact-form/css/contact.css'));
+	
+    // Enqueued script with localized data.
+		
 	wp_head(); ?>
 	<script type="text/javascript">
+		
 		var MyAjax = "<?php echo home_url(); ?>/wp-admin/admin-ajax.php";
 		function refreshCaptcha() {
 			var img = document.images['captchaimg'];		

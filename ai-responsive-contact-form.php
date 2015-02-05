@@ -1,5 +1,4 @@
 <?php
-
 /*
 Plugin Name: Responsive Contact Form
 Plugin URI: http://www.augustinfotech.com
@@ -146,8 +145,10 @@ function ai_load_admin_scripts($hook) {
 
 function ai_add_contact_table(){	
 	global $wpdb;
+	
 	$ai_table_contact = $wpdb->prefix . "ai_contact";			
 	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');	  
+	
 	$wpdb->query("DROP TABLE IF EXISTS ".$ai_table_contact);
 
 	$ai_sql_contact = "CREATE TABLE IF NOT EXISTS $ai_table_contact (
@@ -190,6 +191,7 @@ function ai_action_call(){
 	global $wpdb;
 	$data = $_POST['fdata'];
 	$returndata = array();
+	if(empty($data)) return;
 	$strArray = explode("&", $data);
 	$i = 0;
 
@@ -197,34 +199,32 @@ function ai_action_call(){
 		$array = explode("=", $item);
 		$returndata[$array[0]] = $array[1];
 	}
-
+	
 	foreach($returndata as $key => $val){
 		if($key == 'ai_name'){
-			$ai_name = urldecode($val);
+			$ai_name = sanitize_text_field(urldecode($val));
 		} elseif($key == 'ai_phone') {
 			$ai_phone = urldecode($val);
 		} elseif($key == 'ai_email') {
-			$ai_email = urldecode($val);
+			$ai_email =  sanitize_email(urldecode($val));
 		} elseif($key == 'ai_website') {
 			$ai_website = urldecode($val);
 		} elseif($key == 'ai_subject') {
-			$ai_subject = urldecode($val);
+			$ai_subject = sanitize_text_field(urldecode($val));
 		} elseif($key == 'ai_comment') {
-			$ai_comment = urldecode($val);
+			$ai_comment = sanitize_text_field(urldecode($val));
 		} elseif($key == 'ai_captcha') {
 			$ai_captcha = urldecode($val);
-
 		} elseif($key == 'ai_sendcopy') { 
 			$sendcopy = $val;
 		}		
 	}
 
 	if(get_option('ai_email_address_setting')==''){
-		$ai_emailadmin = get_option('admin_email');	
+		$ai_emailadmin = sanitize_email(get_option('admin_email'));	
 
 	} else {
 		$ai_emailadmin = get_option('ai_email_address_setting');
-
 	}
         
 	if(get_option('ai_subject_text')==''){
@@ -290,8 +290,7 @@ function ai_action_call(){
 	$ai_admin_headers .= "From: ".$ai_name." <".$ai_email.">\n";
 	$ai_admin_headers .= "Message-Id: <".time()."@".$_SERVER['SERVER_NAME'].">\n";
 	$ai_admin_headers .= "X-Mailer: php-mail-function-0.2\n";
-
-	$ai_usercopy_subject = __('Copy of form submitted','aicontactform');
+    $ai_usercopy_subject = __('Copy of form submitted','aicontactform');
 
 	if($arr == 1) {		
 		wp_mail($ai_email, $ai_subject_mail, $ai_reply_msg, $ai_headers);
@@ -308,9 +307,9 @@ function ai_action_call(){
 		$ai_insert_user = get_option('ai_rm_user_list');			
 		if($ai_insert_user != 'on') {
 			if($ai_name != 'User' && $ai_name != '') {
-				$wpdb->insert( $table_name, array("username" => urlencode($ai_name), "email_id" => $ai_email, "message" => $ai_comment, "contact_date" => $date ));
+				$wpdb->query( $wpdb->prepare( "INSERT INTO $table_name(  username, email_id, message, contact_date )VALUES ( %s, %s,  %s,  %s )",  array( $ai_name, $ai_email, $ai_comment, $date ) ) );
 			} else {
-				$wpdb->insert( $table_name, array("email_id" => $ai_email, "message" => $ai_comment, "contact_date" => $date ));
+				$wpdb->query( $wpdb->prepare( "INSERT INTO $table_name(   email_id, message, contact_date )VALUES (  %s,  %s,  %s )",  array( $ai_email, $ai_comment, $date ) ) );
 			}
 		}		
 		//Added contact request data into mailchimp database if mailchimp extension is active

@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
 			data:{
 				action: 'ai_action', 
 				fdata : jQuery(document.formValidate).serialize()
-			}, 
+			},
 			success:function(response) {
 				if(response == 1) {
 					jQuery("#smsg").slideDown(function() {
